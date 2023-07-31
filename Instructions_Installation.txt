@@ -1,65 +1,83 @@
 
+## 1. Prepare your directory
 
---- Installing
+```shell
+mkdir dispel4py_autoscaling
+cd dispel4py_autoscaling
+```
 
-0. conda create --name py37 python=3.7
-1. conda activate py37 
-2. pip uninstall dispel4py
-3. git clone https://github.com/zhtisi/dispel4py.git 
-4. git checkout dynamic_redis_stateful_dev
-5. cd dispel4py
-6. python setup.py install
+## 2. Create a new python 3.7 environment
 
-Or 
-
-1. conda create --name py37 python=3.7
-2. conda activate py37
-3. tar -zxvf dispel4py.tar . 
-4. cd dispel4py
-5. python setup.py install
-
----
-
-pip install redis or brew install redis
-
----
-
-Word Count Example
+```shell
+conda create --name py37_d4p python=3.7
+conda activate py37_d4p
+```
 
 
-RDD: python -m dispel4py.new.processor dispel4py.new.dynamic_redis_v1 dispel4py.examples.graph_testing.word_count -ri localhost -n 4 -i 10
+## 3. Clone Github Repo 
 
-FD -This is the one that works for groupings!! 
+using https 
+```shell
+git clone https://github.com/NoPuzzle/dispel4py_autoscaling.git
+```
 
-python -m dispel4py.new.processor dispel4py.new.dynamic_redis dispel4py.examples.graph_testing.word_count -ri localhost -n 4 -i 10
-
-
-Note: In another tab, we need to have REDIS working in background: >> redis-server 
---
-
-Internal Extinction (dispel4py/examples/internal_extinction)
-
-RDD:
-
-python -m dispel4py.new.processor  dispel4py.new.dynamic_redis_v1 dispel4py.examples.internal_extinction.int_ext_graph  -ri localhost -n 4 -d "{\"read\" : [ {\"input\" : \"dispel4py/examples/internal_extinction/coordinates.txt\"} ]}"
-
-FD -This is the one that works for groupings!! 
-
-python -m dispel4py.new.processor  dispel4py.new.dynamic_redis dispel4py.examples.internal_extinction.int_ext_graph  -ri localhost -n 4 -d "{\"read\" : [ {\"input\" : \"dispel4py/examples/internal_extinction/coordinates.txt\"} ]}"
-
-Note: In another tab, we need to have REDIS working in background: >> redis-server 
-
------------
-
-Sentiment Analysis (dispel4py/examples/article_sentiment_analysis)
+or ssh
+```shell
+git clone git@github.com:NoPuzzle/dispel4py_autoscaling.git
+```
 
 
-Note I have copied already these - not need to do these two lines anymore. 
-- cp dispel4py/examples/article_sentiment_analysis/AFINN-111.txt .
-- cp dispel4py/examples/article_sentiment_analysis/SentiWordNet_3.0.0_20130122.txt .
+## 4. Install dispel4py
+```shell
+cd dispel4py
+python setup.py install
+cp ../requirements_d4py.txt .
+pip install -r requirements_d4py.txt
+```
+
+install a library for logging
+
+```shell
+conda install coloredlogs
+```
 
 
-FD Strategy: 
-python -m dispel4py.new.processor  dispel4py.new.dynamic_redis dispel4py.examples.article_sentiment_analysis.analysis_sentiment -ri localhost -n 32 -d "{\"read\" : [ {\"input\" : \"dispel4py/examples/articles_sentiment_analysis/Articles_cleaned.csv\"} ]}
+## 5. Testing dynamic 
 
-Note: In another tab, we need to have REDIS working in background: >> redis-server 
+```
+cd dispel4py/examples/internal_extinction
+```
+#### Testing dynamic mapping
+
+```
+python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+#### Testing dynamic autoscaling mapping
+```
+python -m dispel4py.new.processor new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+
+##  6. Testing dynamic Redis
+
+> Go to another terminal for following command line
+
+```shell
+conda activate py37_d4p
+redis-server
+```
+
+> Go back to previous terminal
+
+#### Testing dynamic redis mapping
+> this may not work
+```shell
+python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+
+#### Testing dynamic redis autoscaling mapping
+```shell
+python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
