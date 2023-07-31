@@ -1,0 +1,65 @@
+
+
+--- Installing
+
+0. conda create --name py37 python=3.7
+1. conda activate py37 
+2. pip uninstall dispel4py
+3. git clone https://github.com/zhtisi/dispel4py.git 
+4. git checkout dynamic_redis_stateful_dev
+5. cd dispel4py
+6. python setup.py install
+
+Or 
+
+1. conda create --name py37 python=3.7
+2. conda activate py37
+3. tar -zxvf dispel4py.tar . 
+4. cd dispel4py
+5. python setup.py install
+
+---
+
+pip install redis or brew install redis
+
+---
+
+Word Count Example
+
+
+RDD: python -m dispel4py.new.processor dispel4py.new.dynamic_redis_v1 dispel4py.examples.graph_testing.word_count -ri localhost -n 4 -i 10
+
+FD -This is the one that works for groupings!! 
+
+python -m dispel4py.new.processor dispel4py.new.dynamic_redis dispel4py.examples.graph_testing.word_count -ri localhost -n 4 -i 10
+
+
+Note: In another tab, we need to have REDIS working in background: >> redis-server 
+--
+
+Internal Extinction (dispel4py/examples/internal_extinction)
+
+RDD:
+
+python -m dispel4py.new.processor  dispel4py.new.dynamic_redis_v1 dispel4py.examples.internal_extinction.int_ext_graph  -ri localhost -n 4 -d "{\"read\" : [ {\"input\" : \"dispel4py/examples/internal_extinction/coordinates.txt\"} ]}"
+
+FD -This is the one that works for groupings!! 
+
+python -m dispel4py.new.processor  dispel4py.new.dynamic_redis dispel4py.examples.internal_extinction.int_ext_graph  -ri localhost -n 4 -d "{\"read\" : [ {\"input\" : \"dispel4py/examples/internal_extinction/coordinates.txt\"} ]}"
+
+Note: In another tab, we need to have REDIS working in background: >> redis-server 
+
+-----------
+
+Sentiment Analysis (dispel4py/examples/article_sentiment_analysis)
+
+
+Note I have copied already these - not need to do these two lines anymore. 
+- cp dispel4py/examples/article_sentiment_analysis/AFINN-111.txt .
+- cp dispel4py/examples/article_sentiment_analysis/SentiWordNet_3.0.0_20130122.txt .
+
+
+FD Strategy: 
+python -m dispel4py.new.processor  dispel4py.new.dynamic_redis dispel4py.examples.article_sentiment_analysis.analysis_sentiment -ri localhost -n 32 -d "{\"read\" : [ {\"input\" : \"dispel4py/examples/articles_sentiment_analysis/Articles_cleaned.csv\"} ]}
+
+Note: In another tab, we need to have REDIS working in background: >> redis-server 
