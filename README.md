@@ -16,14 +16,89 @@ If using the MPI mapping:
 
 ## Installation
 
-Clone this repository to your desktop. You can then install from the local copy to your python environment by calling:
+
+## 1. Prepare your directory
+
+```shell
+mkdir dispel4py_autoscaling
+cd dispel4py_autoscaling
+```
+
+## 2. Create a new python 3.7 environment
+
+```shell
+conda create --name py37_d4p python=3.7
+conda activate py37_d4p
+```
+
+
+## 3. Clone Github Repo 
+
+using https 
+```shell
+git clone https://github.com/NoPuzzle/dispel4py_autoscaling.git
+```
+
+or ssh
+```shell
+git clone git@github.com:NoPuzzle/dispel4py_autoscaling.git
+```
+
+
+## 4. Install dispel4py
+```shell
+cd dispel4py
+python setup.py install
+cp ../requirements_d4py.txt .
+pip install -r requirements_d4py.txt
+```
+
+install a library for logging
+
+```shell
+conda install coloredlogs
+```
+
+
+## 5. Testing dynamic 
 
 ```
-python setup.py install
+cd dispel4py/examples/internal_extinction
+```
+#### Testing dynamic mapping
+
+```
+python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
-from the dispel4py root directory.
+#### Testing dynamic autoscaling mapping
+```
+python -m dispel4py.new.processor new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
 
+
+##  6. Testing dynamic Redis
+
+> Go to another terminal for following command line
+
+```shell
+conda activate py37_d4p
+redis-server
+```
+
+> Go back to previous terminal
+
+#### Testing dynamic redis mapping
+> this may not work
+```shell
+python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+
+#### Testing dynamic redis autoscaling mapping
+```shell
+python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
 ## Docker
 
 The Dockerfile in the dispel4py root directory builds a Debian Linux distribution and installs dispel4py and OpenMPI.
