@@ -16,12 +16,17 @@ Then, run the script. Example run commands for several other modes are listed be
 ### Run with simple mode:
 ```shell
 python -m dispel4py.new.processor simple int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}'
+OR
+dispel4py simple int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}'
 ```
 The ‘coordinates.txt’ file is the workflow's input data with the coordinates of the galaxies.
 
 ### Run with multiprocessing mode:
 ```shell
 python -m dispel4py.new.processor multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR
+dispel4py multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+
 ``` 
  Parameter '-n' specify the number of processes.
 
@@ -29,11 +34,15 @@ python -m dispel4py.new.processor multi int_ext_graph.py -d '{"read" : [ {"input
 #### Run with dynamic multi mapping 
 ``` 
 python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR
+dispel4py new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Run with dynamic multi mapping autoscaling mapping 
 ```
 python -m dispel4py.new.processor new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR
+dispel4py new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 ----- REDIS ----
@@ -49,14 +58,20 @@ In another tab you can do the following runs:
 #### Run with dynamic redis mapping 
 ```shell
 python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR
+dispel4py new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Run with dynamic redis autoscaling mapping 
 ```shell 
 python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR
+dispel4py new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Run with hybrid redis mapping 
 ```shell
 python -m dispel4py.new.processor hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR
+dispel4py hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
