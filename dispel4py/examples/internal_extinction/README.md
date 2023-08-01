@@ -32,6 +32,16 @@ python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"inp
 python -m dispel4py.new.processor new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
+----- REDIS ----
+You need REDIS server running in a tab: 
+
+```shell
+conda activate py37_d4p
+redis-server
+``` 
+
+In another tab you can do the following runs: 
+
 #### Run with dynamic redis mapping 
 ```shell
 python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
