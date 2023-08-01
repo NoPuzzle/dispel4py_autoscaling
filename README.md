@@ -164,6 +164,5 @@ to filter specified columns used in the internal extinction computation. And thi
 
 - **Sentiment Analyses for News Articles**: [This workflow](dispel4py/examples/article_sentiment_analysis) uses two different approaches to analyse the sentiment of news articles (i.e. score the news article), and these sentiment scores are then grouped according to the location where they were published. Finally, the workflow will output the three happiest locations with their scores.
 
-
-
+- **graph_testing**: [This directory](dispel4py/examples/graph_testing) in contains a collection of dispel4py workflows used for testing and validating the functionalities and behavior of dataflow graphs. These workflows are primarily used for testing purposes and ensure that the different mappings (e.g., simple, MPI, Storm) and various features of dispel4py work as expected. They help in verifying the correctness and efficiency of dataflow graphs during development and maintenance of the dispel4py library
 
