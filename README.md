@@ -103,17 +103,17 @@ conda install -c conda-forge zipp
 ```
 
 
-## 5. Testing dynamic 
+## 5. Testing dynamic multi mapping
 
 ```
 cd dispel4py/examples/internal_extinction
 ```
-#### Testing dynamic mapping
+#### Testing dynamic multi mapping with a stateless workflow
 ```
 python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
-#### Testing dynamic autoscaling mapping
+#### Testing dynamic multi autoscaling mapping with a statless workflow
 ```
 python -m dispel4py.new.processor new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
@@ -129,26 +129,23 @@ redis-server
 
 > Go back to previous terminal
 
-#### Testing dynamic redis mapping
-> this may not work
+#### Testing dynamic redis mapping with a stateless workflow 
 ```shell
 python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
-
-
-#### Testing dynamic redis autoscaling mapping
+#### Testing dynamic redis autoscaling mapping with a stateless workflow
 ```shell
 python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 
-#### Testing hybrid redis mapping for stateless workflow
+#### Testing hybrid redis mapping for a stateless workflow
 ```shell
 python -m dispel4py.new.processor hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
-#### Testing hybrid redis mapping for stateful
+#### Testing hybrid redis mapping for a stateful workflow
 ```shell
 cd ../graph_testing 
 python -m dispel4py.new.processor hybrid_redis split_merge.py -i 100 -n 10
