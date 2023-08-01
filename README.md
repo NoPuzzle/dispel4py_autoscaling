@@ -148,7 +148,7 @@ python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read
 python -m dispel4py.new.processor hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
-#### Testing hybrid redis mapping for a stateful workflow
+#### Testing hybrid redis mapping for two stateful workflows
 ```shell
 cd ../graph_testing 
 python -m dispel4py.new.processor hybrid_redis split_merge.py -i 100 -n 10
