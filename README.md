@@ -78,6 +78,7 @@ Optional but recommand to install
 ```shell
 conda install coloredlogs
 conda install -c conda-forge astropy
+conda install -c conda-forge zipp
 ```
 
 
