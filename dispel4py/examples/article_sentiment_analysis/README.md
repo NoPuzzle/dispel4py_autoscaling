@@ -1,5 +1,13 @@
+## Sentiment Analyses for News Articles
 
-## How to run the test
+[This workflow](dispel4py/examples/article_sentiment_analysis) uses two different approaches to analyse the sentiment of news articles (i.e. score the news article), and these sentiment scores are then grouped according to the location where they were published. Finally, the workflow will output the three happiest locations with their scores.
+
+The news articles used in this case are collected from a public Kaggle dataset [News Articles](https://www.kaggle.com/datasets/asad1m9a9h6mood/news-articles).This dataset contains news articles from 2015 related to business and sports with their heading, content, public location and date. As some of the data had missing fields and some of the articles contained a large number of nonsensical characters (e.g. <script>, <br/>), a Python script was developed for the project to pre-process the data. 
+
+The first PE, "Read Articles", reads articles from an input file and then extracts the article content line by line. Every time a line is read and parsed, one data is generated and sent to two downstream PEs. PE "Sentiment AFINN" calculate the news article’s sentiment score by [AFINN lexicon](./AFINN-111.txt). PE "Tokenisation WD" and "Sentiment SWN3" tokenise the news article content and then calculate the sentiment score using the [SWN3](SentiWordNet_3.0.0_20130122.txt) lexicon. After that, data from both branches go to their respective "Find State" - "Happy State" - "Top 3 Happiest" PE chain. The three PEs find the location of each data, group the received data by location and finally display the three happiest (highest scoring) locations and their scores. The number of instances of the PE "Happy State" in the "SWN3" branch is set to 3 in order to reflect the stateful character.
+
+
+## How to run the workflow with different mappings 
 
 To run this test, the following two steps are required, namely the preparation of the data and the execution of the test script.
 
