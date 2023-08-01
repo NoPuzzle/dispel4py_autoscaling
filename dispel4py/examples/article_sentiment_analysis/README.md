@@ -1,6 +1,6 @@
 ## Sentiment Analyses for News Articles
 
-[This workflow](dispel4py/examples/article_sentiment_analysis) uses two different approaches to analyse the sentiment of news articles (i.e. score the news article), and these sentiment scores are then grouped according to the location where they were published. Finally, the workflow will output the three happiest locations with their scores.
+[This workflow](./analysis_sentiment.py) uses two different approaches to analyse the sentiment of news articles (i.e. score the news article), and these sentiment scores are then grouped according to the location where they were published. Finally, the workflow will output the three happiest locations with their scores.
 
 The news articles used in this case are collected from a public Kaggle dataset [News Articles](https://www.kaggle.com/datasets/asad1m9a9h6mood/news-articles).This dataset contains news articles from 2015 related to business and sports with their heading, content, public location and date. As some of the data had missing fields and some of the articles contained a large number of nonsensical characters (e.g. <script>, `<br/>`), a Python script was developed for the project to pre-process the data. 
 
