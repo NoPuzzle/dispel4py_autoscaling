@@ -36,5 +36,5 @@ RUN conda install -y jupyter numpy
 
 # install dispel4py latest
 RUN git clone https://github.com/NoPuzzle/dispel4py_autoscaling.git && \
-    pip install -r requirements_d4py.txt && \
+    pip install -r requirements.txt && \
     python setup.py install

@@ -30,12 +30,12 @@ The following Python packages are required to run dispel4py, no need to manually
 - storm == 0.25
 - thrift == 0.16.0
 - ujson == 5.2.0
+- zipp == 3.4.0
 
 
 The following Python packages are optional depending the mapping or workflow to run (**Recommend to install**):
 - astropy == 4.3.1
 - coloredlogs == 15.0.1
-- zipp == 3.12.1
 
 ## Introduction of Mappings
 
@@ -91,19 +91,22 @@ git clone git@github.com:NoPuzzle/dispel4py_autoscaling.git
 
 ## 4. Install dispel4py
 ```shell
+pip install -r requirements.txt
 python setup.py install
-pip install -r requirements_d4py.txt
 ```
 
-Optional but recommand to install
+Optional but recommand to install to run an [astrophysics example workflow](dispel4py/examples/internal_extinction). 
 ```shell
-conda install coloredlogs
-conda install -c conda-forge astropy
-conda install -c conda-forge zipp
+ pip install astropy==4.3.1
 ```
 
 
 ## 5. Testing dynamic multi mapping
+
+We are going to use an **Astrophysics: Internal Extinction of Galaxies codes** [workflow](dispel4py/examples/internal_extinction) to test different mappings.
+You will need the astropy (see above) python library installed. More info about this workflow can be seen [here](https://github.com/rosafilgueira/dispel4py_workflows/tree/master#astrophysics-internal-extinction-of-galaxies-workflow).
+
+
 
 ```
 cd dispel4py/examples/internal_extinction
