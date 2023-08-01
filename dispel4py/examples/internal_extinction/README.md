@@ -2,7 +2,7 @@
 ## How to run the Astrophysics: Internal Extinction of Galaxies test
 
 To run the this test, first you need to install:
-```bash
+```shell
 $ pip install requests
 $ pip install astropy
 ``` 
@@ -10,28 +10,39 @@ $ pip install astropy
 Then, run the script. Example run commands for several other modes are listed below:
 
 ### Run with simple mode:
-```bash
-$ dispel4py\new\processor.py simple dispel4py.examples.internal_extinction.int_ext_graph -d "{\"read\" : [ {\"input\" : \"coordinates.txt\"} ]}"
+```shell
+python -m dispel4py.new.processor simple int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}'
 ```
 The ‘coordinates.txt’ file is the workflow's input data with the coordinates of the galaxies.
 
 ### Run with multiprocessing mode:
-```bash
-$ dispel4py\new\processor.py multi dispel4py.examples.internal_extinction.int_ext_graph -n 4 -d "{\"read\" : [ {\"input\" : \"coordinates.txt\"} ]}"
+```shell
+python -m dispel4py.new.processor multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ``` 
  Parameter '-n' specify the number of processes.
 
-### Run with old dynamic mode:
-```bash
-$ dispel4py\new\processor.py dynamic dispel4py.examples.internal_extinction.int_ext_graph  -n 4 -d "{\"read\" : [ {\"input\" : \"coordinates.txt\"} ]}"
+
+#### Run with dynamic multi mapping 
 ``` 
-### Run with dynamic v1 mode:
-```bash
-$ dispel4py\new\processor.py dynamic_redis_v1 dispel4py.examples.article_sentiment_analysis.analysis_sentiment -ri localhost -n 4 -d "{\"read\" : [ {\"input\" : \"Articles_cleaned.csv\"} ]}"
+python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
-Note that, you should additionally specify the IP address(parameter '-ri') and port(parameter '-rp', optional, default 6379) of the redis server.
-  
-### Run with enhanced dynamic mode:
-```bash
-$ dispel4py\new\processor.py dynamic_redis dispel4py.examples.article_sentiment_analysis.analysis_sentiment -ri localhost -n 12 -d "{\"read\" : [ {\"input\" : \"Articles_cleaned.csv\"} ]}"
+
+#### Run with dynamic multi mapping autoscaling mapping 
+```
+python -m dispel4py.new.processor new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+#### Run with dynamic redis mapping 
+```shell
+python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+#### Run with dynamic redis autoscaling mapping 
+```shell 
+python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+#### Run with hybrid redis mapping 
+```shell
+python -m dispel4py.new.processor hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
