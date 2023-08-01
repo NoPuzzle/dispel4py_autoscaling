@@ -96,8 +96,7 @@ python setup.py install
 ```
 Simple instalation testing:
 
-```
-shell
+```shell
 python -m dispel4py.new.processor simple dispel4py.examples.graph_testing.word_count -i 10
 OR 
 dispel4py simple dispel4py.examples.graph_testing.word_count -i 10
