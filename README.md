@@ -31,10 +31,11 @@ The following Python packages are required to run dispel4py, no need to manually
 - thrift == 0.16.0
 - ujson == 5.2.0
 
+
 The following Python packages are optional depending the mapping or workflow to run (**Recommend to install**):
 - astropy == 4.3.1
 - coloredlogs == 15.0.1
-
+- zipp == 3.12.1
 
 ## Installation
 
@@ -118,23 +119,4 @@ python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [
 #### Testing dynamic redis autoscaling mapping
 ```shell
 python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
-```
-## Docker
-
-The Dockerfile in the dispel4py root directory builds a Debian Linux distribution and installs dispel4py and OpenMPI.
-
-```
-docker build . -t dare-dispel4py
-```
-
-Start a Docker container with the dispel4py image in interactive mode with a bash shell:
-
-```
-docker run -it dare-dispel4py /bin/bash
-```
-
-For the EPOS use cases obspy is included in a separate Dockerfile `Dockerfile.seismo`:
-
-```
-docker build . -f Dockerfile.seismo -t dare-dispel4py-seismo
 ```
