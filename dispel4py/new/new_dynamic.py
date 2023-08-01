@@ -13,6 +13,12 @@ from queue import Empty
 
 from dispel4py.core import GenericPE, WRITER
 
+TIMEOUT_IN_SECONDS = 1
+MAX_RETRIES = 5
+
+MULTI_TIMEOUT = TIMEOUT_IN_SECONDS
+
+
 # from test_workflow import producer, graph
 # from dispel4py.examples.internal_extinction.int_ext_graph import read, graph
 # from internal_extinction.int_ext_graph import read, graph
@@ -83,13 +89,18 @@ class DynamicWroker():
         Function to process a worker in the workflow.
         """
 
+        retries = 0
+        # timeout = INIT_TIMEOUT
+
         while True:
             try:
                 # Initially, block until an item is available
                 # logger.debug(f"rank = {self.rank}, {self.queue.empty()}")
-                value = self.queue.get(not self.queue.empty())
+                # value = self.queue.get(not self.queue.empty())
+                value = self.queue.get(timeout=MULTI_TIMEOUT)
 
                 if value == 'STOP':
+                    # self.queue.put('STOP')
                     break
                 
 
@@ -115,18 +126,33 @@ class DynamicWroker():
                         if destinations:
                             for dest_id, input_name in destinations:
                                 self.queue.put((dest_id, {input_name: output_value}))
-                        
+
+                # Reset retries after successful process
+                retries = 0
+                # timeout = INIT_TIMEOUT    
 
             except Empty:
-                # pass
-                # logger.info(f"Empty queue")
-                break
+                # Implement the retry mechanism here
+                # timeout += INIT_TIMEOUT
+                retries += 1
+
+                if retries == MAX_RETRIES:
+                    self.queue.put('STOP')
+
+                    logger.error(f"Here lol Empty queue, timeout = {MULTI_TIMEOUT * MAX_RETRIES}")
+                    break
+
+            # except Empty:
+            #     # pass
+            #     # logger.info(f"Empty queue")
+            #     break
+
             except Exception as e:
-                # logger.error(f"Exception = {e}")
+                logger.error(f"Exception = {e}")
                 pass
 
 
-            self.queue.put('STOP')
+        self.queue.put('STOP')
 
 
     def _get_destination(self, node, output_name):

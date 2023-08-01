@@ -22,7 +22,12 @@ MANAGER_TERMIATE_NO = "NO"
 STREAM_KEY = DISPEL4PY_REDIS_AUTO_PREFIX + "_STREAM"
 GROUP_NAME = DISPEL4PY_REDIS_AUTO_PREFIX + "_GROUP"
 FIELD_KEY = "KEY"
-INIT_TIMEOUT = 100
+
+TIMEOUT_IN_SECONDS = 1
+MAX_RETRIES = 5
+
+REDIS_TIMEOUT = TIMEOUT_IN_SECONDS * 1000
+
 
 
 
@@ -153,39 +158,30 @@ class AutoDynamicRedisWorker(DynamicRedisWroker):
     def process(self):
         
         try:
-
             worker_redis = connect(name=f"worker_{self.rank}")
-
-
-            
             # logger.debug(f"worker_{self.rank} is processing")
 
             response = []
             retries = 0
-            timeout = INIT_TIMEOUT
+            # timeout = REDIS_TIMEOUT
 
             while not response:
 
-                response = worker_redis.xreadgroup(GROUP_NAME, f"worker_{self.rank}", {STREAM_KEY: '>'}, count=1, block=timeout)
+                response = worker_redis.xreadgroup(GROUP_NAME, f"worker_{self.rank}", {STREAM_KEY: '>'}, count=1, block=REDIS_TIMEOUT)
 
                 if worker_redis.hget(MANAGER_KEY, MANAGER_TERMIATE_FIELD) == MANAGER_TERMIATE_YES:
                     logger.debug(f"worker_{self.rank} is exiting")
 
                     # return
                     break
-                # for _, messages in response:
-                #     for id, message in messages:
-                #         if 'exit' in message and message['exit']:
-                #             worker_redis.xadd(STREAM_KEY, {'exit': "1"}, "*")
-                #             logger.debug(f"worker_{self.rank} is exiting")
-                #             return
-            
-                timeout *= 2
+
                 retries+=1
-                if retries == 5:
+                if retries == MAX_RETRIES:
                     
                     worker_redis.hset(MANAGER_KEY, MANAGER_TERMIATE_FIELD, MANAGER_TERMIATE_YES)
-                    logger.debug(f"worker_{self.rank} is exiting and terminating the workflow")
+                    # logger.debug(f"worker_{self.rank} is exiting and terminating the workflow")
+                    # logger.debug(f"worker_{self.rank} is exiting")
+                    logger.error(f"Empty queue, timeout = {REDIS_TIMEOUT * MAX_RETRIES}")
 
                     # worker_redis.xadd(STREAM_KEY, {'exit': "1"}, "*")
                     # return

@@ -19,7 +19,12 @@ DISPEL4PY_REDIS_PREFIX = "DISPEL4PY_DYN"
 STREAM_KEY = DISPEL4PY_REDIS_PREFIX + "_STREAM"
 GROUP_NAME = DISPEL4PY_REDIS_PREFIX + "_GROUP"
 FIELD_KEY = "KEY"
-INIT_TIMEOUT = 100
+
+
+TIMEOUT_IN_SECONDS = 1
+MAX_RETRIES = 5
+
+REDIS_TIMEOUT = TIMEOUT_IN_SECONDS * 1000
 
 
 class RedisWriter:
@@ -76,14 +81,14 @@ class DynamicRedisWorker():
     def process(self):
 
         redis = connect(name="worker")
-        timeout = INIT_TIMEOUT
+        # timeout = INIT_TIMEOUT
         retries = 0
 
         # logger.debug(f"self.cp_graph = {self.graph!r}, redis = {redis!r}")
 
         while True:
             try:
-                response = redis.xreadgroup(GROUP_NAME, f"worker_{self.rank}", {STREAM_KEY: ">"}, count=1,  block=timeout)
+                response = redis.xreadgroup(GROUP_NAME, f"worker_{self.rank}", {STREAM_KEY: ">"}, count=1,  block=REDIS_TIMEOUT)
                 
                 # posion pill need here
 
@@ -114,12 +119,14 @@ class DynamicRedisWorker():
                     redis.xack(STREAM_KEY, GROUP_NAME, enrty_id)
 
                 else:
-                    if retries == 5:
-                        logger.error(f"Worker {self.rank} has been idle for too long. Exiting...")
+
+                    if retries == MAX_RETRIES:
+                        logger.error(f"Empty queue, timeout = {REDIS_TIMEOUT * MAX_RETRIES}")
+                        # logger.error(f"Worker {self.rank} has been idle for too long. Exiting...")
                         break
 
                     retries += 1
-                    timeout *= 2
+                    # timeout *= 2
                     continue
 
                                         

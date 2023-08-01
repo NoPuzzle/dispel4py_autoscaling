@@ -19,6 +19,12 @@ from dispel4py.core import GenericPE, WRITER
 
 from dispel4py.new.logger import logger, print_stack_trace
 
+TIMEOUT_IN_SECONDS = 1
+MAX_RETRIES = 5
+
+MULTI_TIMEOUT = TIMEOUT_IN_SECONDS
+
+
 def parse_args(args, namespace):
     parser = argparse.ArgumentParser(
         prog='dispel4py',
@@ -137,40 +143,57 @@ class AutoDynamicWroker(DynamicWroker):
 
     def process(self):
 
-        try:
-            # Initially, block until an item is available
-            value = self.queue.get(not self.queue.empty())
-            # logger.debug(f"here rank = {self.rank}, value = {value}")
+        retries = 0
+        while retries < MAX_RETRIES:
+            try:
+                # Initially, block until an item is available
+                value = self.queue.get(timeout=MULTI_TIMEOUT)
 
-            pe_id, data = value
-            pe = self.node_pe[pe_id]['pe']
-            node = self.node_pe[pe_id]['node']
+                if value == 'STOP':
+                    # self.queue.put('STOP')
+                    break
 
-            # logger.debug(f"rank = {self.rank}, pe_id = {pe_id}, pe = {pe}, node = {node}") 
-            
-            for output_name in pe.outputconnections:
+                # logger.debug(f"here rank = {self.rank}, value = {value}")
 
-                destinations = self._get_destination(node, output_name)
-                pe.outputconnections[output_name][WRITER] = GenericWriter(self.queue, destinations)
-            
-            # logger.debug(f"outputconnections = {pe.outputconnections}")
+                pe_id, data = value
+                pe = self.node_pe[pe_id]['pe']
+                node = self.node_pe[pe_id]['node']
 
-            output = pe.process(data)
-            # logger.debug(f"rank = {self.rank}, output = {output}")
-            if output:
-                for output_name, output_value in output.items():
+                # logger.debug(f"rank = {self.rank}, pe_id = {pe_id}, pe = {pe}, node = {node}") 
+                
+                for output_name in pe.outputconnections:
+
                     destinations = self._get_destination(node, output_name)
-                    if destinations:
-                        for dest_id, input_name in destinations:
-                            self.queue.put((dest_id, {input_name: output_value}))
+                    pe.outputconnections[output_name][WRITER] = GenericWriter(self.queue, destinations)
+                
+                # logger.debug(f"outputconnections = {pe.outputconnections}")
+
+                output = pe.process(data)
+                # logger.debug(f"rank = {self.rank}, output = {output}")
+                if output:
+                    for output_name, output_value in output.items():
+                        destinations = self._get_destination(node, output_name)
+                        if destinations:
+                            for dest_id, input_name in destinations:
+                                self.queue.put((dest_id, {input_name: output_value}))
+                
+                # If everything goes smoothly, break out of the loop
+                break
+                        
+            except Empty:
+
+                retries += 1
+                if retries == MAX_RETRIES:
                     
-        except Empty:
-            # pass
-            logger.info(f"Empty queue")
-            # return None
-            
-        except Exception as e:
-            logger.error(f"Exception = {e}")
+                    self.queue.put('STOP')
+                    logger.error(f"Here lol Empty queue, timeout = {MULTI_TIMEOUT * MAX_RETRIES}")
+
+                    return
+                
+            except Exception as e:
+                logger.error(f"Exception = {e}")
+
+                return
                 
 
 class AutoScaler():
