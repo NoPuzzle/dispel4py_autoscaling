@@ -4,7 +4,8 @@
 
 
 ## How to run the workflow with different mappings
-Activate the enviroment - if you had not created, go to the README instructions of this repository.
+Activate the enviroment - if you had not created, go to the [README instructions](https://github.com/NoPuzzle/dispel4py_autoscaling/tree/main#2-create-a-new-python-37-environment) of this repository.
+
 
 ```
 conda activate py37_d4p
