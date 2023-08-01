@@ -88,7 +88,6 @@ conda install -c conda-forge zipp
 cd dispel4py/examples/internal_extinction
 ```
 #### Testing dynamic mapping
-
 ```
 python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
@@ -97,7 +96,6 @@ python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"inp
 ```
 python -m dispel4py.new.processor new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
-
 
 ##  6. Testing dynamic Redis
 
@@ -117,7 +115,21 @@ python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [
 ```
 
 
+
 #### Testing dynamic redis autoscaling mapping
 ```shell
 python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+
+#### Testing hybrid redis mapping for stateless workflow
+```shell
+python -m dispel4py.new.processor hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
+
+#### Testing hybrid redis mapping for stateful
+```shell
+cd ../graph_testing 
+python -m dispel4py.new.processor hybrid_redis split_merge.py -i 100 -n 10
+python -m dispel4py.new.processor hybrid_redis grouping_alltoone_stateful.py -i 100 -n 10
 ```
