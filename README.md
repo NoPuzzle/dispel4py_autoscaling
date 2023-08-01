@@ -6,13 +6,35 @@ dispel4py is a free and open-source Python library for describing abstract strea
 
 dispel4py has been tested with Python *2.7.6*, *2.7.5*, *2.7.2*, *2.6.6* and Python *3.4.3*, *3.6*, *3.7*.
 
-The following Python packages are required to run dispel4py:
+The following Python packages are required to run dispel4py, no need to manually install, see the [installation](#installation):
 
-- networkx (https://networkx.github.io/)
+- PyJWT == 2.6.0
+- flake8 == 5.0.0
+- httpsproxy-urllib2 == 1.0
+- ipython == 7.34.0
+- lxml == 4.8.0
+- matplotlib == 3.5.1
+- msgpack == 0.6.2
+- networkx == 2.6.3
+- nltk == 3.7
+- nose == 1.3.7
+- numpy == 1.21.5
+- pandas == 1.3.5
+- pyzmq == 23.2.0
+- redis == 4.4.2
+- requests == 2.28.1
+- scipy == 1.7.3
+- seaborn == 0.12.2
+- setuptools == 54.2.0
+- six == 1.16.0
+- storm == 0.25
+- thrift == 0.16.0
+- ujson == 5.2.0
 
-If using the MPI mapping:
+The following Python packages are optional depending the mapping or workflow to run (**Recommend to install**):
+- astropy == 4.3.1
+- coloredlogs == 15.0.1
 
-- mpi4py (http://mpi4py.scipy.org/)
 
 ## Installation
 
@@ -47,16 +69,14 @@ git clone git@github.com:NoPuzzle/dispel4py_autoscaling.git
 
 ## 4. Install dispel4py
 ```shell
-cd dispel4py
 python setup.py install
-cp ../requirements_d4py.txt .
 pip install -r requirements_d4py.txt
 ```
 
-install a library for logging
-
+Optional but recommand to install
 ```shell
 conda install coloredlogs
+conda install -c conda-forge astropy
 ```
 
 
