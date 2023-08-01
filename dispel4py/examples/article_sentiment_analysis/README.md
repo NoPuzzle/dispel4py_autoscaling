@@ -9,6 +9,12 @@ The first PE, "Read Articles", reads articles from an input file and then extrac
 
 ## How to run the workflow with different mappings 
 
+Activate the enviroment - if you had not created, go to the [README instructions](https://github.com/NoPuzzle/dispel4py_autoscaling/tree/main#2-create-a-new-python-37-environment) of this repository.
+
+```
+conda activate py37_d4p
+```
+
 ***Atention!!:** This workflow is a **statefull** workflow!! So only the **fixed workload mappings** and **hybrid** mapping could be used to run this workflow.
 
 To run this test, the following two steps are required, namely the preparation of the data and the execution of the test script.
@@ -35,7 +41,11 @@ Note that you don't need to run the cleaning script again if you already have th
 
 To run the test script, first you need to install:
 ```shell
-$ pip install nltk numpy 
+  $ pip install nltk numpy 
+  $ python
+  >>> import nltk
+  >>> nltk.download('averaged_perceptron_tagger')
+
 ``` 
 
 In multiprocessing mode, parameter '-n' specify the number of processes. For executing it with the multiprocessing mode and assign 13 processes:
