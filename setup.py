@@ -26,9 +26,9 @@ def read(fname):
 
 setup(
     name="dispel4py",
-    version="1.3.0",
-    author="The University of Edinburgh",
-    author_email="a.krause@epcc.ed.ac.uk",
+    version="1.4.0",
+    author="University of St Andrews",
+    author_email="rf208@st-andrews.ac.uk",
     description=("dispel4py is a free and open-source Python library for \
         describing abstract stream-based workflows for distributed \
         data-intensive applications."),
