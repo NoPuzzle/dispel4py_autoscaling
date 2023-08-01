@@ -91,6 +91,7 @@ git clone git@github.com:NoPuzzle/dispel4py_autoscaling.git
 
 ## 4. Install dispel4py
 ```shell
+cd dispel4py_autoscaling
 pip install -r requirements.txt
 python setup.py install
 ```
