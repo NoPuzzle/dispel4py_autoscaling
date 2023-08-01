@@ -103,7 +103,7 @@ Optional but recommand to install to run an [astrophysics example workflow](disp
 
 ## 5. Testing dynamic multi mapping
 
-We are going to use an **Astrophysics: Internal Extinction of Galaxies codes** [workflow](dispel4py/examples/internal_extinction) to test different mappings.
+We are going to use an **Astrophysics: Internal Extinction of Galaxies** [workflow](dispel4py/examples/internal_extinction) to test different mappings.
 You will need the astropy (see above) python library installed. More info about this workflow can be seen [here](https://github.com/rosafilgueira/dispel4py_workflows/tree/master#astrophysics-internal-extinction-of-galaxies-workflow).
 
 
@@ -154,3 +154,16 @@ cd ../graph_testing
 python -m dispel4py.new.processor hybrid_redis split_merge.py -i 100 -n 10
 python -m dispel4py.new.processor hybrid_redis grouping_alltoone_stateful.py -i 100 -n 10
 ```
+
+## Examples
+
+We have included several dispel4py workflows examples [here](dispel4py/examples). Among then, you can find:
+
+- **Internal Extinction of Galaxies**: [This workflow](dispel4py/examples/internal_extinction) has been developed to calculate the extinction within the galaxies, representing the dust extinction within the galaxies used in measuring the optical luminosity. The first PE, "ReadRaDec", read the coordinator data for 1051 galaxies in an input file. Then, these data are used in the second PE "GetVOTable" as arguments to make an HTTP request to the Virtual Observatory website  and get the VOTable as the response. Finally, these VOTable go into PE "FilterColumns"
+to filter specified columns used in the internal extinction computation. And this computation happened in the last PE, "InternalExtinction". 
+
+- **Sentiment Analyses for News Articles**: [This workflow](dispel4py/examples/article_sentiment_analysis) uses two different approaches to analyse the sentiment of news articles (i.e. score the news article), and these sentiment scores are then grouped according to the location where they were published. Finally, the workflow will output the three happiest locations with their scores.
+
+
+
+
