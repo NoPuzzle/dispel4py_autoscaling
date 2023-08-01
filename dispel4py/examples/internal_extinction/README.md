@@ -4,6 +4,11 @@
 
 
 ## How to run the workflow with different mappings
+Activate the enviroment - if you had not created, go to the README instructions of this repository.
+
+```
+conda activate py37_d4p
+```
 
 To run the this test, first you need to install:
 ```shell
