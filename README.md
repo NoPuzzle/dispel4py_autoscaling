@@ -94,12 +94,19 @@ git clone git@github.com:NoPuzzle/dispel4py_autoscaling.git
 pip install -r requirements.txt
 python setup.py install
 ```
+Simple instalation testing:
+
+```
+shell
+python -m dispel4py.new.processor simple dispel4py.examples.graph_testing.word_count -i 10
+OR 
+dispel4py simple dispel4py.examples.graph_testing.word_count -i 10
+```
 
 Optional but recommand to install to run an [astrophysics example workflow](dispel4py/examples/internal_extinction). 
 ```shell
  pip install astropy==4.3.1
 ```
-
 
 ## 5. Testing dynamic multi mapping
 
@@ -114,11 +121,15 @@ cd dispel4py/examples/internal_extinction
 #### Testing dynamic multi mapping with a stateless workflow
 ```
 python -m dispel4py.new.processor new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR
+dispel4py new_dyn int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Testing dynamic multi autoscaling mapping with a statless workflow
 ```
 python -m dispel4py.new.processor new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR
+dispel4py new_dyn_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 ##  6. Testing dynamic Redis
@@ -135,24 +146,35 @@ redis-server
 #### Testing dynamic redis mapping with a stateless workflow 
 ```shell
 python -m dispel4py.new.processor new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR 
+dispel4py new_dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Testing dynamic redis autoscaling mapping with a stateless workflow
 ```shell
 python -m dispel4py.new.processor new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR 
+dispel4py new_dyn_redis_auto int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 
 #### Testing hybrid redis mapping for a stateless workflow
 ```shell
 python -m dispel4py.new.processor hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+OR 
+dispel4py hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Testing hybrid redis mapping for two stateful workflows
 ```shell
 cd ../graph_testing 
 python -m dispel4py.new.processor hybrid_redis split_merge.py -i 100 -n 10
+OR 
+dispel4py hybrid_redis split_merge.py -i 100 -n 10
+
 python -m dispel4py.new.processor hybrid_redis grouping_alltoone_stateful.py -i 100 -n 10
+OR
+dispel4py hybrid_redis grouping_alltoone_stateful.py -i 100 -n 10
 ```
 
 ## Examples
