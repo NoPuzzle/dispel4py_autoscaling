@@ -50,9 +50,9 @@ To run the test script, first you need to install:
 
 In multiprocessing mode, parameter '-n' specify the number of processes. For executing it with the multiprocessing mode and assign 13 processes:
 ```
-python -m dispel4py.new.processor multi  analysis_sentiment -n 13 -d "{\"read\" : [ {\"input\" : \"Articles_cleaned.csv\"} ]}"
+python -m dispel4py.new.processor multi  analysis_sentiment -n 13 -d '{"read":[{"input":"Articles_cleaned.csv"}]}' 
 OR 
-dispel4py multi  analysis_sentiment -n 13 -d "{\"read\" : [ {\"input\" : \"Articles_cleaned.csv\"} ]}"
+dispel4py multi  analysis_sentiment -n 13  -d '{"read":[{"input":"Articles_cleaned.csv"}]}' 
 ``` 
 
 In hybrid mode, parameter '-n' specify the number of processes. For executing it with the multiprocessing mode and assign 13 processes:
@@ -68,8 +68,8 @@ redis server
 In another tab you can do the following run: 
 
 ```
-python -m dispel4py.new.processor hybrid_redis analysis_sentiment -n 13 -d "{\"read\" : [ {\"input\" : \"Articles_cleaned.csv\"} ]}"
+python -m dispel4py.new.processor hybrid_redis analysis_sentiment -n 13  -d '{"read":[{"input":"Articles_cleaned.csv"}]}' 
 OR
-dispel4py hybrid_redis analysis_sentiment -n 13 -d "{\"read\" : [ {\"input\" : \"Articles_cleaned.csv\"} ]}"
+dispel4py hybrid_redis analysis_sentiment -n 13  -d '{"read":[{"input":"Articles_cleaned.csv"}]}' 
 ``` 
 
