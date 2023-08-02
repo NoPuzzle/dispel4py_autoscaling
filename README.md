@@ -203,6 +203,20 @@ We have included several dispel4py workflows examples [here](dispel4py/examples)
 - **Internal Extinction of Galaxies**: [This workflow](dispel4py/examples/internal_extinction) has been developed to calculate the extinction within the galaxies, representing the dust extinction within the galaxies used in measuring the optical luminosity. The first PE, "ReadRaDec", read the coordinator data for 1051 galaxies in an input file. Then, these data are used in the second PE "GetVOTable" as arguments to make an HTTP request to the Virtual Observatory website  and get the VOTable as the response. Finally, these VOTable go into PE "FilterColumns"
 to filter specified columns used in the internal extinction computation. And this computation happened in the last PE, "InternalExtinction". 
 
+- **tc_cross_correlation**
+To run this
+```shell
+cd home/ll2419/dispel4py_autoscaling/dispel4py/examples/corr
+mkdir INPUT
+python download.py 
+
+python -m dispel4py.new.processor dyn_multi prep.py -f xcorr_input.jsn -n 10
+python -m dispel4py.new.processor dyn_multi realtime_prep.py -f xcorr_input.jsn -n 10
+python -m dispel4py.new.processor dyn_auto_multi realtime_prep.py -f xcorr_input.jsn -n 10
+python -m dispel4py.new.processor dyn_auto_multi realtime_prep.py -f xcorr_input.jsn -n 16
+python -m dispel4py.new.processor dyn_multi realtime_prep.py -f xcorr_input.jsn -n 16
+```
+
 - **Sentiment Analyses for News Articles**: [This workflow](dispel4py/examples/article_sentiment_analysis) uses two different approaches to analyse the sentiment of news articles (i.e. score the news article), and these sentiment scores are then grouped according to the location where they were published. Finally, the workflow will output the three happiest locations with their scores.
 
 - **graph_testing**: [This directory](dispel4py/examples/graph_testing) in contains a collection of dispel4py workflows used for testing and validating the functionalities and behavior of dataflow graphs. These workflows are primarily used for testing purposes and ensure that the different mappings (e.g., simple, MPI, Storm) and various features of dispel4py work as expected. They help in verifying the correctness and efficiency of dataflow graphs during development and maintenance of the dispel4py library

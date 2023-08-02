@@ -353,5 +353,5 @@ def process(workflow, inputs=None, args=None):
 
 
     print(f"NEW ELAPSED TIME: {(time.time()-start_time):.5f}")
-    # print(f"NEW ELAPSED TIME Without TERMINATION: {(time.time()-start_time- TIMEOUT_IN_SECONDS * MAX_RETRIES):.5f}")
+    print(f"NEW ELAPSED TIME Without TERMINATION: {(time.time()-start_time- TIMEOUT_IN_SECONDS * MAX_RETRIES):.5f}")
     print(f"NEW ELAPSED TOTAL CPU TIME: {CPU_TOTAL_TIME.value:.5f}")

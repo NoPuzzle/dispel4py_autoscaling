@@ -10,6 +10,7 @@ from dispel4py.workflow_graph import WorkflowGraph
 from dispel4py.core import GenericPE
 from dispel4py.base import IterativePE, ConsumerPE
 import bisect
+import time
 
 
 class ReadData(GenericPE):
@@ -52,6 +53,8 @@ class AFINNSentimeScore(IterativePE):
         count = 0
         article_word = nltk.word_tokenize(article['text'])
         sent_score = 0  # sentiment score della frase
+
+        # time.sleep(1)
         for word in article_word:
             word = word.rstrip('?:!.,;"!@')
             word = word.replace("\n", "")

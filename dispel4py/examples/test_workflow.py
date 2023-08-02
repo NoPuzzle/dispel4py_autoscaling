@@ -1,13 +1,18 @@
 from dispel4py.base import ProducerPE, IterativePE, ConsumerPE
 from dispel4py.workflow_graph import WorkflowGraph
 import random
-
+import time
+import numpy as np
 class NumberProducer(ProducerPE):
 
     def __init__(self):
         ProducerPE.__init__(self)
+        
 
     def _process(self, inputs):
+        skewed_sleep_time = np.random.beta(2, 5) / 2  # will give values skewed towards 0 and between 0 and 0.5
+        time.sleep(skewed_sleep_time)
+        # print(f"sleep time is {skewed_sleep_time}")
         result = random.randint(1, 1000)
         return result
 

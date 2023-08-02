@@ -26,6 +26,8 @@ import time
 import uuid
 from random import random
 
+from dispel4py.new.logger import logger
+
 import redis
 
 from dispel4py.core import GROUPING
@@ -159,7 +161,8 @@ def _communicate(pes, nodes, value, proc, r, redis_stream_name, workflow):
                                    {REDIS_STREAM_DATA_DICT_KEY: json.dumps((dest_id, {input_name: output_value}))})
 
     except Exception as e:
-        print(e)
+        # print(e)
+        logger.error(f"Exception = {e}")
         pass
 
 
