@@ -306,7 +306,10 @@ def process(workflow, inputs=None, args=None):
         # workers.append(proc)
 
     print(f"NEW ELAPSED TIME: {(time.time()-start_time):.5f}")
-    # print(f"NEW ELAPSED TIME Without TERMINATION: {(time.time()-start_time- TIMEOUT_IN_SECONDS * MAX_RETRIES):.5f}")
+    print(f"NEW ELAPSED TIME Without TERMINATION: {(time.time()-start_time- TIMEOUT_IN_SECONDS * MAX_RETRIES):.5f}")
     
     print(f"NEW ELAPSED TOTAL CPU TIME: {timer.total_time.value:.5f}")
 
+# args = parse_args(["-n", "4"], None)
+
+# process(graph, {read: [ {"input" : "internal_extinction/coordinates.txt"} ]}, args)
