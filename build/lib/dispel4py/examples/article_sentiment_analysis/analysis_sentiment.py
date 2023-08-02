@@ -10,7 +10,7 @@ from dispel4py.workflow_graph import WorkflowGraph
 from dispel4py.core import GenericPE
 from dispel4py.base import IterativePE, ConsumerPE
 import bisect
-
+import time
 
 class ReadData(GenericPE):
     def __init__(self):
@@ -64,6 +64,8 @@ class AFINNSentimeScore(IterativePE):
         else:
             avg_score = sent_score
 
+        time.sleep(1)
+
         # print("AFINNSentimeScore %s %s %s" % (article, str(avg_score),self.method))
         return (article, avg_score, self.method)
 
@@ -94,6 +96,8 @@ class FindState(IterativePE):
             self.write('output', [article, sent_score, state, method])
 
     def find_state(self, article):
+
+        time.sleep(3)
         # print("FindState:%s" % article['location'])
         return article['location']
 
