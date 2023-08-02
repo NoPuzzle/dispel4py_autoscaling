@@ -120,17 +120,21 @@ You will need the astropy (see above) python library installed. More info about 
 cd dispel4py/examples/internal_extinction
 ```
 #### Testing dynamic multi mapping with a stateless workflow
-```
+```shell
 python -m dispel4py.new.processor dyn_multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```
 OR
+```shell
 dispel4py dyn_multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Testing dynamic multi autoscaling mapping with a statless workflow
+```shell
+python -m dispel4py.new.processor dyn_auto_multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10 -thr 10
 ```
-python -m dispel4py.new.processor dyn_auto_multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 OR
-dispel4py dyn_auto_multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+```shell
+dispel4py dyn_auto_multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10 -thr 10
 ```
 
 ##  6. Testing dynamic Redis
@@ -147,34 +151,48 @@ redis-server
 #### Testing dynamic redis mapping with a stateless workflow 
 ```shell
 python -m dispel4py.new.processor dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
-OR 
+```
+OR
+```shell
 dispel4py dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Testing dynamic redis autoscaling mapping with a stateless workflow
 ```shell
-python -m dispel4py.new.processor dyn_auto_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
-OR 
-dispel4py dyn_auto_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
+python -m dispel4py.new.processor dyn_auto_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10 -thr 200
+```
+OR
+```shell
+dispel4py dyn_auto_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 20 -thr 200
 ```
 
 
 #### Testing hybrid redis mapping for a stateless workflow
 ```shell
 python -m dispel4py.new.processor hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
-OR 
+```
+OR
+```shell
 dispel4py hybrid_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n 10
 ```
 
 #### Testing hybrid redis mapping for two stateful workflows
 ```shell
 cd ../graph_testing 
+```
+```shell
 python -m dispel4py.new.processor hybrid_redis split_merge.py -i 100 -n 10
-OR 
-dispel4py hybrid_redis split_merge.py -i 100 -n 10
-
-python -m dispel4py.new.processor hybrid_redis grouping_alltoone_stateful.py -i 100 -n 10
+```
 OR
+```shell
+dispel4py hybrid_redis split_merge.py -i 100 -n 10
+```
+
+```shell
+python -m dispel4py.new.processor hybrid_redis grouping_alltoone_stateful.py -i 100 -n 10
+```
+OR
+```shell
 dispel4py hybrid_redis grouping_alltoone_stateful.py -i 100 -n 10
 ```
 
