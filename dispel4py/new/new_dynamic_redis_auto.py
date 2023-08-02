@@ -278,13 +278,13 @@ class AutoScaler():
         with self.active_size.get_lock():
             self.active_size.value = max(1, self.active_size.value - size_to_shrink)
 
-        logger.info(f"Shrink: active size = {self.active_size.value}")
+        # logger.info(f"Shrink: active size = {self.active_size.value}")
     
     def grow(self, size_to_grow):
         with self.active_size.get_lock():
             self.active_size.value = min(self.max_pool_size, self.active_size.value + size_to_grow) 
 
-        logger.info(f"Grow: active size = {self.active_size.value}")
+        # logger.info(f"Grow: active size = {self.active_size.value}")
 
 
 
@@ -359,7 +359,7 @@ class AutoScaler():
                 break
 
             total_idle_for_active_workers += consumer['idle']
-        logger.info(f"avg_idle_for_active_workers = {total_idle_for_active_workers/self.active_size.value}")
+        # logger.info(f"avg_idle_for_active_workers = {total_idle_for_active_workers/self.active_size.value}")
         
         if total_idle_for_active_workers/self.active_size.value > self.idle_time_threshold:
             self.shrink(1)
@@ -432,7 +432,7 @@ def process(workflow, inputs=None, args=None):
 
 
     print(f"NEW ELAPSED TIME: {(time.time()-start_time):.5f}")
-    print(f"NEW ELAPSED TIME Without TERMINATION: {(time.time()-start_time- TIMEOUT_IN_SECONDS * MAX_RETRIES):.5f}")
+    # print(f"NEW ELAPSED TIME Without TERMINATION: {(time.time()-start_time- TIMEOUT_IN_SECONDS * MAX_RETRIES):.5f}")
 
     print(f"NEW ELAPSED TOTAL CPU TIME: {CPU_TOTAL_TIME.value:.5f}")
     

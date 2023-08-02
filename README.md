@@ -94,6 +94,8 @@ git clone git@github.com:NoPuzzle/dispel4py_autoscaling.git
 cd dispel4py_autoscaling
 pip install -r requirements.txt
 python setup.py install
+conda install astropy
+conda install coloredlogs
 ```
 
 Simple instalation testing:
@@ -210,7 +212,6 @@ cd home/ll2419/dispel4py_autoscaling/dispel4py/examples/corr
 mkdir INPUT
 python download.py 
 
-python -m dispel4py.new.processor dyn_multi prep.py -f xcorr_input.jsn -n 10
 python -m dispel4py.new.processor dyn_multi realtime_prep.py -f xcorr_input.jsn -n 10
 python -m dispel4py.new.processor dyn_auto_multi realtime_prep.py -f xcorr_input.jsn -n 10
 python -m dispel4py.new.processor dyn_auto_multi realtime_prep.py -f xcorr_input.jsn -n 16
