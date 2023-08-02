@@ -25,3 +25,4 @@ __pycache__/
 
 # Ignore dispel4py.egg-info
 .dispel4py.egg-info
+.dispel4py.egg-info/*
