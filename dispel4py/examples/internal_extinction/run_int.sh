@@ -12,8 +12,8 @@ function run_experiment() {
 
     for pattern in "${patterns[@]}"; do
         # Iterate over the number of processors for each pattern
-        # for n in 4 8 12 16; do
-        for n in 4; do
+        for n in 4 8 12 16; do
+        # for n in 4; do
             echo "${pattern} : running with $n processors" >> $LOGFILE
             python -m dispel4py.new.processor $pattern int_ext_graph.py -d '{"read" : [ {"input" : "cp_coordinates_'$val'.txt"} ]}' -n $n >> $LOGFILE 2>&1
             echo "---------------------------------" >> $LOGFILE
