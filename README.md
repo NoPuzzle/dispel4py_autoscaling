@@ -96,6 +96,7 @@ pip install -r requirements.txt
 python setup.py install
 conda install astropy
 conda install coloredlogs
+conda install requests
 ```
 
 Simple instalation testing:
