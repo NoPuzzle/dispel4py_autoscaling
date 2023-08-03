@@ -10,14 +10,14 @@ source activate py37_d4p_auto_1
 # Iterate over the number of processors for dyn_multi
 for n in 4 8 16 32 64; do
     echo "dyn_multi : running with $n processors"
-    python -m dispel4py.new.processor dyn_multi realtime_prep.py -f xcorr_input.jsn -n $n
+    python -m dispel4py.new.processor $pattern int_ext_graph.py -d '{"read" : [ {"input" : "cp_coordinates_'$val'.txt"} ]}' -n $n
     echo "---------------------------------"
 done
 
 # Iterate over the number of processors for dyn_auto_multi
 for n in 4 8 16 32 64; do
     echo "dyn_auto_multi : running with $n processors"
-    python -m dispel4py.new.processor dyn_auto_multi realtime_prep.py -f xcorr_input.jsn -n $n
+    python -m dispel4py.new.processor $pattern int_ext_graph.py -d '{"read" : [ {"input" : "cp_coordinates_'$val'.txt"} ]}' -n $n
     echo "---------------------------------"
 done
 
