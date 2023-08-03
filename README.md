@@ -97,6 +97,7 @@ python setup.py install
 conda install astropy
 conda install coloredlogs
 conda install requests
+conda install obspy
 ```
 
 Simple instalation testing:

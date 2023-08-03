@@ -1,0 +1,69 @@
+dyn_multi : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=4, provenance=None, target='dyn_multi')
+==========
+Starting 3 workers communicating
+NEW ELAPSED TIME: 62.84544
+NEW ELAPSED TOTAL CPU TIME: 188.34323
+---------------------------------
+dyn_multi : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=8, provenance=None, target='dyn_multi')
+==========
+Starting 7 workers communicating
+NEW ELAPSED TIME: 32.49491
+NEW ELAPSED TOTAL CPU TIME: 223.88500
+---------------------------------
+dyn_multi : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=12, provenance=None, target='dyn_multi')
+==========
+Starting 11 workers communicating
+NEW ELAPSED TIME: 24.23097
+NEW ELAPSED TOTAL CPU TIME: 265.10921
+---------------------------------
+dyn_multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=16, provenance=None, target='dyn_multi')
+==========
+Starting 15 workers communicating
+NEW ELAPSED TIME: 21.92936
+NEW ELAPSED TOTAL CPU TIME: 326.26374
+---------------------------------
+dyn_auto_multi : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=4, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+2023-08-03 15:06:51 dispel4py.new.logger[3997813] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 62.21599
+NEW ELAPSED TOTAL CPU TIME: 173.94807
+---------------------------------
+dyn_auto_multi : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=8, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+2023-08-03 15:07:54 dispel4py.new.logger[3998891] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 38.98722
+NEW ELAPSED TOTAL CPU TIME: 183.00971
+---------------------------------
+dyn_auto_multi : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=12, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+2023-08-03 15:08:35 dispel4py.new.logger[3999949] ERROR Exception = an integer is required (got type NoneType)
+2023-08-03 15:08:35 dispel4py.new.logger[3999953] ERROR Exception = an integer is required (got type NoneType)
+2023-08-03 15:08:35 dispel4py.new.logger[3999937] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 30.42949
+NEW ELAPSED TOTAL CPU TIME: 209.18019
+---------------------------------
+dyn_auto_multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=16, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+2023-08-03 15:09:07 dispel4py.new.logger[4001042] ERROR Exception = an integer is required (got type NoneType)
+2023-08-03 15:09:07 dispel4py.new.logger[4001024] ERROR Exception = an integer is required (got type NoneType)
+2023-08-03 15:09:07 dispel4py.new.logger[4001038] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 26.79138
+NEW ELAPSED TOTAL CPU TIME: 209.65776
+---------------------------------
+All experiments completed!
