@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Output log file
-LOGFILE="output.log"
+LOGFILE="output_int_300.log"
 
 # Empty the log file first
 > $LOGFILE
@@ -10,7 +10,7 @@ LOGFILE="output.log"
 for n in 4 8 12 16 20; do
 # for n in 4; do
     echo "dyn_multi : running with $n processors" >> $LOGFILE
-    python -m dispel4py.new.processor dyn_multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n $n >> $LOGFILE 2>&1
+    python -m dispel4py.new.processor dyn_multi int_ext_graph.py -d '{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}' -n $n >> $LOGFILE 2>&1
     echo "---------------------------------" >> $LOGFILE
 done
 
@@ -18,7 +18,7 @@ done
 for n in 4 8 12 16 20; do
 # for n in 4; do
     echo "dyn_auto_multi : running with $n processors" >> $LOGFILE
-    python -m dispel4py.new.processor dyn_auto_multi int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n $n >> $LOGFILE 2>&1
+    python -m dispel4py.new.processor dyn_auto_multi int_ext_graph.py -d '{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}' -n $n >> $LOGFILE 2>&1
     echo "---------------------------------" >> $LOGFILE
 done
 
@@ -28,7 +28,7 @@ done
 for n in 4 8 12 16 20; do
 # for n in 4; do
     echo "dyn_redis : running with $n processors" >> $LOGFILE
-    python -m dispel4py.new.processor dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n $n >> $LOGFILE 2>&1
+    python -m dispel4py.new.processor dyn_redis int_ext_graph.py -d '{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}' -n $n >> $LOGFILE 2>&1
     echo "---------------------------------" >> $LOGFILE
 done
 
@@ -37,7 +37,7 @@ done
 for n in 4 8 12 16 20; do
 # for n in 4; do
     echo "dyn_auto_redis : running with $n processors" >> $LOGFILE
-    python -m dispel4py.new.processor dyn_auto_redis int_ext_graph.py -d '{"read" : [ {"input" : "coordinates.txt"} ]}' -n $n >> $LOGFILE 2>&1
+    python -m dispel4py.new.processor dyn_auto_redis int_ext_graph.py -d '{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}' -n $n >> $LOGFILE 2>&1
     echo "---------------------------------" >> $LOGFILE
 done
 

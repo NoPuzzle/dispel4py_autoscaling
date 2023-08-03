@@ -64,7 +64,6 @@ class AFINNSentimeScore(IterativePE):
         else:
             avg_score = sent_score
 
-        time.sleep(1)
 
         # print("AFINNSentimeScore %s %s %s" % (article, str(avg_score),self.method))
         return (article, avg_score, self.method)
@@ -97,7 +96,6 @@ class FindState(IterativePE):
 
     def find_state(self, article):
 
-        time.sleep(3)
         # print("FindState:%s" % article['location'])
         return article['location']
 

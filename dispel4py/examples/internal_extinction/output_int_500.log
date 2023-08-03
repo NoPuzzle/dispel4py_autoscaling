@@ -1,0 +1,152 @@
+dyn_multi : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=4, provenance=None, target='dyn_multi')
+==========
+Starting 3 workers communicating
+NEW ELAPSED TIME: 69.16249
+NEW ELAPSED TOTAL CPU TIME: 207.34948
+---------------------------------
+dyn_multi : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=8, provenance=None, target='dyn_multi')
+==========
+Starting 7 workers communicating
+NEW ELAPSED TIME: 35.05667
+NEW ELAPSED TOTAL CPU TIME: 235.88785
+---------------------------------
+dyn_multi : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=12, provenance=None, target='dyn_multi')
+==========
+Starting 11 workers communicating
+NEW ELAPSED TIME: 22.01997
+NEW ELAPSED TOTAL CPU TIME: 241.50891
+---------------------------------
+dyn_multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=16, provenance=None, target='dyn_multi')
+==========
+Starting 15 workers communicating
+NEW ELAPSED TIME: 17.52072
+NEW ELAPSED TOTAL CPU TIME: 261.67146
+---------------------------------
+dyn_multi : running with 20 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=20, provenance=None, target='dyn_multi')
+==========
+Starting 19 workers communicating
+NEW ELAPSED TIME: 16.56459
+NEW ELAPSED TOTAL CPU TIME: 313.05426
+---------------------------------
+dyn_auto_multi : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=4, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 75.65513
+NEW ELAPSED TOTAL CPU TIME: 183.64618
+---------------------------------
+dyn_auto_multi : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=8, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 36.72214
+NEW ELAPSED TOTAL CPU TIME: 173.15852
+---------------------------------
+dyn_auto_multi : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=12, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 29.71447
+NEW ELAPSED TOTAL CPU TIME: 209.70667
+---------------------------------
+dyn_auto_multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=16, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 33.68679
+NEW ELAPSED TOTAL CPU TIME: 243.33485
+---------------------------------
+dyn_auto_multi : running with 20 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=20, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+2023-08-03 11:39:42 dispel4py.new.logger[3976483] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 32.41274
+NEW ELAPSED TOTAL CPU TIME: 361.00865
+---------------------------------
+dyn_redis : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=4, provenance=None, target='dyn_redis')
+==========
+Starting 3 workers communicating
+NEW ELAPSED TIME: 54.90440
+NEW ELAPSED TOTAL CPU TIME: 164.65763
+---------------------------------
+dyn_redis : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=8, provenance=None, target='dyn_redis')
+==========
+Starting 7 workers communicating
+NEW ELAPSED TIME: 32.72899
+NEW ELAPSED TOTAL CPU TIME: 228.45281
+---------------------------------
+dyn_redis : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=12, provenance=None, target='dyn_redis')
+==========
+Starting 11 workers communicating
+NEW ELAPSED TIME: 22.43023
+NEW ELAPSED TOTAL CPU TIME: 244.89123
+---------------------------------
+dyn_redis : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=16, provenance=None, target='dyn_redis')
+==========
+Starting 15 workers communicating
+NEW ELAPSED TIME: 19.14497
+NEW ELAPSED TOTAL CPU TIME: 279.13717
+---------------------------------
+dyn_redis : running with 20 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=20, provenance=None, target='dyn_redis')
+==========
+Starting 19 workers communicating
+NEW ELAPSED TIME: 22.62087
+NEW ELAPSED TOTAL CPU TIME: 425.61387
+---------------------------------
+dyn_auto_redis : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=4, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 80.07460
+NEW ELAPSED TOTAL CPU TIME: 140.69198
+---------------------------------
+dyn_auto_redis : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=8, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 93.62813
+NEW ELAPSED TOTAL CPU TIME: 200.48188
+---------------------------------
+dyn_auto_redis : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=12, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 63.77613
+NEW ELAPSED TOTAL CPU TIME: 187.02333
+---------------------------------
+dyn_auto_redis : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=16, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 111.07563
+NEW ELAPSED TOTAL CPU TIME: 248.41977
+---------------------------------
+dyn_auto_redis : running with 20 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=20, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 66.82702
+NEW ELAPSED TOTAL CPU TIME: 214.68403
+---------------------------------
+All experiments completed!

@@ -427,7 +427,8 @@ def process(workflow, inputs=None, args=None):
                     payload = {FIELD_KEY : json.dumps((node.obj.id , d))}
                     redis.xadd(STREAM_KEY, payload, "*")
 
-    auto_scaler = AutoScaler(size, 10, redis, idle_time)
+    initial_size = int(size/2)+1
+    auto_scaler = AutoScaler(size, initial_size, redis, idle_time)
     auto_scaler.process(graph)
 
 

@@ -345,7 +345,8 @@ def process(workflow, inputs=None, args=None):
                 for d in provided_inputs:
                     queue.put((node.obj.id, d))
 
-    auto_scaler = AutoScaler(queue, size, 4, queue_threshold)
+    initial_size = int(size/2)+1
+    auto_scaler = AutoScaler(queue, size, initial_size, queue_threshold)
     
     auto_scaler.process(graph)
 
