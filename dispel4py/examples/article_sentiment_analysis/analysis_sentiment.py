@@ -33,7 +33,7 @@ class ReadData(GenericPE):
             # print("TEXT %s", text)
             self.write('output', return_article)
 
-        print("Total articles found %s" % self.count)
+        # print("Total articles found %s" % self.count)
 
 
 class AFINNSentimeScore(IterativePE):
@@ -164,8 +164,8 @@ class GlobalHappyState(GenericPE):
             # print("METHOD:%s - top:%s----> state = %s, score = %s, total_articles = %s" % (
             # method, count, state, score, self.total_articles))
 
-            print("METHOD:%s - top:%s----> state = %s, score = %s, total_articles = %s" % (
-            method, count, state, score, self.total_articles))
+            # print("METHOD:%s - top:%s----> state = %s, score = %s, total_articles = %s" % (
+            # method, count, state, score, self.total_articles))
             count += 1
 
 

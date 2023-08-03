@@ -14,7 +14,7 @@ from queue import Empty
 from dispel4py.core import GenericPE, WRITER
 
 TIMEOUT_IN_SECONDS = 1
-MAX_RETRIES = 5
+MAX_RETRIES = 2
 
 MULTI_TIMEOUT = TIMEOUT_IN_SECONDS
 

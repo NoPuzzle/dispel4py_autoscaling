@@ -19,7 +19,7 @@ from dispel4py.core import GenericPE, WRITER
 from dispel4py.new.logger import logger, print_stack_trace
 
 TIMEOUT_IN_SECONDS = 1
-MAX_RETRIES = 5
+MAX_RETRIES = 2
 
 MULTI_TIMEOUT = TIMEOUT_IN_SECONDS
 

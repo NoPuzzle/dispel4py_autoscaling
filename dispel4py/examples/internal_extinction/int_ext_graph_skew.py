@@ -119,7 +119,7 @@ class GetVOTable(IterativePE):
         count, ra, dec, sr = data
         # print('reading VOTable RA=%s, DEC=%s' % (ra,dec))
         # skewed_sleep_time = np.random.beta(2, 5) / 2  # will give values skewed towards 0 and between 0 and 0.5
-        skewed_sleep_time = np.random.beta(2, 5)
+        skewed_sleep_time = np.random.beta(2, 5) * 2
         time.sleep(skewed_sleep_time)
         # print(f"sleep time is {skewed_sleep_time} from GetVOTable")
 
@@ -161,8 +161,8 @@ class InternalExtinction(IterativePE):
         logr25 = data[4]
 
         # skewed_sleep_time = np.random.beta(2, 5) / 2  # will give values skewed towards 0 and between 0 and 0.5
-        skewed_sleep_time = np.random.beta(2, 5)
-        time.sleep(skewed_sleep_time)
+        # skewed_sleep_time = np.random.beta(2, 5)
+        # time.sleep(skewed_sleep_time)
 
         # print(f"sleep time is {skewed_sleep_time} from InternalExtinction")
 

@@ -1,160 +1,235 @@
+multi : running with 4 processors
+Traceback (most recent call last):
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
+    main()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 851, in main
+    graph, inputs = load_graph_and_inputs(args, )
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 800, in load_graph_and_inputs
+    from dispel4py.provenance import CommandLineInputs
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/provenance.py", line 41, in <module>
+    import requests
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/requests/__init__.py", line 43, in <module>
+    import urllib3
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/urllib3/__init__.py", line 13, in <module>
+    from . import exceptions
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/urllib3/exceptions.py", line 7, in <module>
+    from http.client import IncompleteRead as httplib_IncompleteRead
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/http/client.py", line 72, in <module>
+    import email.message
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/email/message.py", line 10, in <module>
+    import uu
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 670, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 589, in module_from_spec
+  File "<frozen importlib._bootstrap>", line 568, in _init_module_attrs
+  File "<frozen importlib._bootstrap>", line 409, in cached
+KeyboardInterrupt
+---------------------------------
 dyn_multi : running with 4 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=4, provenance=None, target='dyn_multi')
-==========
-Starting 3 workers communicating
-NEW ELAPSED TIME: 40.46301
-NEW ELAPSED TOTAL CPU TIME: 121.23109
----------------------------------
-dyn_multi : running with 8 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=8, provenance=None, target='dyn_multi')
-==========
-Starting 7 workers communicating
-NEW ELAPSED TIME: 17.13976
-NEW ELAPSED TOTAL CPU TIME: 119.70170
----------------------------------
-dyn_multi : running with 12 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=12, provenance=None, target='dyn_multi')
-==========
-Starting 11 workers communicating
-NEW ELAPSED TIME: 13.54030
-NEW ELAPSED TOTAL CPU TIME: 148.27476
----------------------------------
-dyn_multi : running with 16 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=16, provenance=None, target='dyn_multi')
-==========
-Starting 15 workers communicating
-NEW ELAPSED TIME: 12.09913
-NEW ELAPSED TOTAL CPU TIME: 179.83037
----------------------------------
-dyn_multi : running with 20 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=20, provenance=None, target='dyn_multi')
-==========
-Starting 19 workers communicating
-NEW ELAPSED TIME: 11.39125
-NEW ELAPSED TOTAL CPU TIME: 213.86743
+Traceback (most recent call last):
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
+    main()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 851, in main
+    graph, inputs = load_graph_and_inputs(args, )
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 800, in load_graph_and_inputs
+    from dispel4py.provenance import CommandLineInputs
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/provenance.py", line 28, in <module>
+    import socket
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/socket.py", line 49, in <module>
+    import _socket
+KeyboardInterrupt
 ---------------------------------
 dyn_auto_multi : running with 4 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=4, provenance=None, queue_threshold=10, target='dyn_auto_multi')
 ==========
-NEW ELAPSED TIME: 30.19839
-NEW ELAPSED TOTAL CPU TIME: 79.39131
----------------------------------
-dyn_auto_multi : running with 8 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=8, provenance=None, queue_threshold=10, target='dyn_auto_multi')
-==========
-NEW ELAPSED TIME: 15.23306
-NEW ELAPSED TOTAL CPU TIME: 86.98720
----------------------------------
-dyn_auto_multi : running with 12 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=12, provenance=None, queue_threshold=10, target='dyn_auto_multi')
-==========
-2023-08-03 12:12:43 dispel4py.new.logger[3985567] ERROR Exception = an integer is required (got type NoneType)
-2023-08-03 12:12:43 dispel4py.new.logger[3985582] ERROR Exception = an integer is required (got type NoneType)
-NEW ELAPSED TIME: 25.32335
-NEW ELAPSED TOTAL CPU TIME: 160.30368
----------------------------------
-dyn_auto_multi : running with 16 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=16, provenance=None, queue_threshold=10, target='dyn_auto_multi')
-==========
-NEW ELAPSED TIME: 17.41503
-NEW ELAPSED TOTAL CPU TIME: 147.61027
----------------------------------
-dyn_auto_multi : running with 20 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=20, provenance=None, queue_threshold=10, target='dyn_auto_multi')
-==========
-2023-08-03 12:13:17 dispel4py.new.logger[3989278] ERROR Exception = an integer is required (got type NoneType)
-2023-08-03 12:13:17 dispel4py.new.logger[3989287] ERROR Exception = an integer is required (got type NoneType)
-2023-08-03 12:13:17 dispel4py.new.logger[3989288] ERROR Exception = an integer is required (got type NoneType)
-2023-08-03 12:13:17 dispel4py.new.logger[3989284] ERROR Exception = an integer is required (got type NoneType)
-2023-08-03 12:13:17 dispel4py.new.logger[3989294] ERROR Exception = an integer is required (got type NoneType)
-2023-08-03 12:13:17 dispel4py.new.logger[3989297] ERROR Exception = an integer is required (got type NoneType)
-2023-08-03 12:13:17 dispel4py.new.logger[3989282] ERROR Exception = an integer is required (got type NoneType)
-NEW ELAPSED TIME: 16.43496
-NEW ELAPSED TOTAL CPU TIME: 196.54320
+Process ForkPoolWorker-2:
+Traceback (most recent call last):
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/pool.py", line 110, in worker
+    task = get()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/queues.py", line 351, in get
+    with self._rlock:
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+KeyboardInterrupt
+Process ForkPoolWorker-3:
+Traceback (most recent call last):
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/pool.py", line 121, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/new_dynamic_auto.py", line 179, in process
+    output = pe.process(data)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/new_dynamic_auto.py", line 90, in process
+    return self.pe.process(data)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/base.py", line 76, in process
+    result = self._process(data)
+  File "int_ext_graph.py", line 95, in _process
+    response = requests.get(url)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/requests/adapters.py", line 497, in send
+    chunked=chunked,
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/urllib3/connectionpool.py", line 802, in urlopen
+    **response_kw,
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/urllib3/connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+Process ForkPoolWorker-4:
+Traceback (most recent call last):
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/pool.py", line 110, in worker
+    task = get()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/queues.py", line 352, in get
+    res = self._reader.recv_bytes()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
+    main()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 876, in main
+    errormsg = process(graph, inputs=inputs, args=args)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/new_dynamic_auto.py", line 351, in process
+    auto_scaler.process(graph)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/new_dynamic_auto.py", line 282, in process
+    [result.get() for result in results]
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/new_dynamic_auto.py", line 282, in <listcomp>
+    [result.get() for result in results]
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/pool.py", line 651, in get
+    self.wait(timeout)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/pool.py", line 648, in wait
+    self._event.wait(timeout)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/threading.py", line 552, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/threading.py", line 296, in wait
+    waiter.acquire()
+KeyboardInterrupt
 ---------------------------------
 dyn_redis : running with 4 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=4, provenance=None, target='dyn_redis')
-==========
-Starting 3 workers communicating
-NEW ELAPSED TIME: 36.97428
-NEW ELAPSED TOTAL CPU TIME: 110.86256
----------------------------------
-dyn_redis : running with 8 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=8, provenance=None, target='dyn_redis')
-==========
-Starting 7 workers communicating
-NEW ELAPSED TIME: 17.99251
-NEW ELAPSED TOTAL CPU TIME: 125.28806
----------------------------------
-dyn_redis : running with 12 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=12, provenance=None, target='dyn_redis')
-==========
-Starting 11 workers communicating
-NEW ELAPSED TIME: 15.13266
-NEW ELAPSED TOTAL CPU TIME: 164.50192
----------------------------------
-dyn_redis : running with 16 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=16, provenance=None, target='dyn_redis')
-==========
-Starting 15 workers communicating
-NEW ELAPSED TIME: 13.70107
-NEW ELAPSED TOTAL CPU TIME: 201.00572
----------------------------------
-dyn_redis : running with 20 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, iter=1, module='int_ext_graph.py', num=20, provenance=None, target='dyn_redis')
-==========
-Starting 19 workers communicating
-NEW ELAPSED TIME: 15.45930
-NEW ELAPSED TOTAL CPU TIME: 288.50759
+Traceback (most recent call last):
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
+    main()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 851, in main
+    graph, inputs = load_graph_and_inputs(args, )
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 814, in load_graph_and_inputs
+    graph = load_graph(args.module, args.attr)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/utils.py", line 69, in load_graph
+    return loadGraph(graph_source, attr)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/utils.py", line 60, in loadGraph
+    mod = import_module(module_name)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ll2419/dispel4py_autoscaling/dispel4py/examples/internal_extinction/int_ext_graph.py", line 31, in <module>
+    import numpy
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/__init__.py", line 163, in <module>
+    from . import ma
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/ma/__init__.py", line 42, in <module>
+    from . import core
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/ma/core.py", line 6790, in <module>
+    maximum = _extrema_operation(umath.maximum, greater, maximum_fill_value)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/ma/core.py", line 6634, in __init__
+    super().__init__(ufunc)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/ma/core.py", line 891, in __init__
+    self.__doc__ = ufunc.__doc__
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/core/_internal.py", line 859, in _ufunc_doc_signature_formatter
+    kwargs=kwargs
+KeyboardInterrupt
 ---------------------------------
 dyn_auto_redis : running with 4 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=4, provenance=None, target='dyn_auto_redis')
-==========
-NEW ELAPSED TIME: 70.54342
-NEW ELAPSED TOTAL CPU TIME: 89.23139
+Traceback (most recent call last):
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
+    main()
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 851, in main
+    graph, inputs = load_graph_and_inputs(args, )
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 814, in load_graph_and_inputs
+    graph = load_graph(args.module, args.attr)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/utils.py", line 69, in load_graph
+    return loadGraph(graph_source, attr)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/utils.py", line 60, in loadGraph
+    mod = import_module(module_name)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/ll2419/dispel4py_autoscaling/dispel4py/examples/internal_extinction/int_ext_graph.py", line 31, in <module>
+    import numpy
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/__init__.py", line 153, in <module>
+    from . import lib
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/lib/__init__.py", line 21, in <module>
+    from . import scimath as emath
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/lib/scimath.py", line 291, in <module>
+    @array_function_dispatch(_unary_dispatcher)
+  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/numpy/core/overrides.py", line 198, in decorator
+    source, filename='<__array_function__ internals>', mode='exec')
+KeyboardInterrupt
 ---------------------------------
-dyn_auto_redis : running with 8 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=8, provenance=None, target='dyn_auto_redis')
-==========
-NEW ELAPSED TIME: 23.79614
-NEW ELAPSED TOTAL CPU TIME: 112.27589
----------------------------------
-dyn_auto_redis : running with 12 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=12, provenance=None, target='dyn_auto_redis')
-==========
-NEW ELAPSED TIME: 15.86409
-NEW ELAPSED TOTAL CPU TIME: 128.63917
----------------------------------
-dyn_auto_redis : running with 16 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=16, provenance=None, target='dyn_auto_redis')
-==========
-NEW ELAPSED TIME: 39.46774
-NEW ELAPSED TOTAL CPU TIME: 138.02279
----------------------------------
-dyn_auto_redis : running with 20 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_300.txt"} ]}', file=None, idle_time=100, iter=1, module='int_ext_graph.py', num=20, provenance=None, target='dyn_auto_redis')
-==========
-NEW ELAPSED TIME: 62.09927
-NEW ELAPSED TOTAL CPU TIME: 172.78508
----------------------------------
-All experiments completed!
+Experiments for 300 completed!

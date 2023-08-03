@@ -208,6 +208,10 @@ Description: # dispel4py
         dispel4py hybrid_redis grouping_alltoone_stateful.py -i 100 -n 10
         ```
         
+        ```shell
+        python -m dispel4py.new.processor hybrid_redis analysis_sentiment.py -d '{"read":[{"input":"Articles_cleaned.csv"}]}' -n 12 
+        ```
+        
         ## Examples
         
         We have included several dispel4py workflows examples [here](dispel4py/examples). Among then, you can find:

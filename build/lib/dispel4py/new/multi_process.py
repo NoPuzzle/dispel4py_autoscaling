@@ -55,7 +55,31 @@ from dispel4py.new.processor \
     import GenericWrapper, simpleLogger, STATUS_ACTIVE, STATUS_TERMINATED, SimpleProcessingPE
 from dispel4py.new import processor
 
+import time
 
+class TimerDecorator:
+    def __init__(self):
+        # Creating a multiprocessing.Value of type double ('d') with initial value 0.0
+        self.total_time = multiprocessing.Value('d', 0.0)
+        # self.lock = multiprocessing.Lock()
+
+    def __call__(self, func):
+        def wrapper(*args, **kwargs):
+            start_time = time.time()
+            result = func(*args, **kwargs)
+            end_time = time.time()
+            duration = end_time - start_time
+
+            with self.total_time.get_lock():
+                self.total_time.value += duration
+
+            # print(f"'{func.__name__}' took {duration:.5f} seconds to execute.")
+            return result
+        return wrapper
+
+timer = TimerDecorator()
+
+@timer
 def _processWorker(wrapper):
     wrapper.process()
 
@@ -74,6 +98,9 @@ def parse_args(args, namespace):    # pragma: no cover
 
 
 def process(workflow, inputs, args):
+
+    start_time = time.time()
+
     size = args.num
     success = True
     nodes = [node.getContainedObject() for node in workflow.graph.nodes()]
@@ -154,6 +181,11 @@ def process(workflow, inputs, args):
 
     if result_queue:
         result_queue.put(STATUS_TERMINATED)
+
+    print(f"NEW ELAPSED TIME: {(time.time()-start_time):.5f}")
+    # print(f"NEW ELAPSED TIME Without TERMINATION: {(time.time()-start_time- TIMEOUT_IN_SECONDS * MAX_RETRIES):.5f}")
+
+    print(f"NEW ELAPSED TOTAL CPU TIME: {timer.total_time.value:.5f}")
     return result_queue
 
 

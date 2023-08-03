@@ -72,6 +72,29 @@ REDIS_LOCK_RENEW_INTERVAL = 10
 SIGNAL_TERMINATED = "TERMINATED"
 
 
+class TimerDecorator:
+    def __init__(self):
+        # Creating a multiprocessing.Value of type double ('d') with initial value 0.0
+        self.total_time = multiprocessing.Value('d', 0.0)
+
+
+    def __call__(self, func):
+        def wrapper(*args, **kwargs):
+            start_time = time.time()
+            result = func(*args, **kwargs)
+            end_time = time.time()
+            duration = end_time - start_time
+
+            with self.total_time.get_lock():
+                self.total_time.value += duration
+
+            # print(f"'{func.__name__}' took {duration:.5f} seconds to execute.")
+            return result
+        return wrapper
+
+timer = TimerDecorator()
+
+
 def parse_args(args, namespace):
     """
         Parse args for dynamic redis
@@ -266,7 +289,7 @@ class GenericWriter:
                     self.r.xadd(self.redis_stream_name,
                                 {REDIS_STREAM_DATA_DICT_KEY: json.dumps((dest_id, {input_name: output_value}))})
 
-
+@timer
 def _process_worker(workflow, redis_ip, redis_port, redis_stream_name, redis_stream_group_name, proc, stateful=False,
                     stateful_instance_id=None):
     """
@@ -446,9 +469,13 @@ def process(workflow, inputs, args):
         j.start()
     for j in jobs:
         j.join()
-
-    if AUTO_TERMINATE_ENABLE:
-        print(f"ELAPSED TIME(minus {PROCESS_AUTO_TERMINATE_MAX_IDLE} second(s) for AUTO_TERMINATE): " + str(
-            time.time() - start_time - PROCESS_AUTO_TERMINATE_MAX_IDLE))
-    else:
-        print("ELAPSED TIME: " + str(time.time() - start_time))
+    
+    print(f"NEW ELAPSED TIME: {(time.time()-start_time):.5f}")
+    # print(f"NEW ELAPSED TIME Without TERMINATION: {(time.time()-start_time- TIMEOUT_IN_SECONDS * MAX_RETRIES):.5f}")
+    
+    print(f"NEW ELAPSED TOTAL CPU TIME: {timer.total_time.value:.5f}")
+    # if AUTO_TERMINATE_ENABLE:
+    #     print(f"ELAPSED TIME(minus {PROCESS_AUTO_TERMINATE_MAX_IDLE} second(s) for AUTO_TERMINATE): " + str(
+    #         time.time() - start_time - PROCESS_AUTO_TERMINATE_MAX_IDLE))
+    # else:
+    #     print("ELAPSED TIME: " + str(time.time() - start_time))
