@@ -1,0 +1,122 @@
+dyn_multi : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=4, provenance=None, target='dyn_multi')
+==========
+Starting 3 workers communicating
+NEW ELAPSED TIME: 44.77513
+NEW ELAPSED TOTAL CPU TIME: 133.94742
+---------------------------------
+dyn_multi : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=8, provenance=None, target='dyn_multi')
+==========
+Starting 7 workers communicating
+NEW ELAPSED TIME: 20.86117
+NEW ELAPSED TOTAL CPU TIME: 144.87707
+---------------------------------
+dyn_multi : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=12, provenance=None, target='dyn_multi')
+==========
+Starting 11 workers communicating
+NEW ELAPSED TIME: 15.75985
+NEW ELAPSED TOTAL CPU TIME: 171.78243
+---------------------------------
+dyn_multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=16, provenance=None, target='dyn_multi')
+==========
+Starting 15 workers communicating
+NEW ELAPSED TIME: 13.47204
+NEW ELAPSED TOTAL CPU TIME: 199.33969
+---------------------------------
+dyn_auto_multi : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=4, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+2023-08-03 17:59:44 dispel4py.new.logger[4013550] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 47.56317
+NEW ELAPSED TOTAL CPU TIME: 104.36553
+---------------------------------
+dyn_auto_multi : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=8, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 20.98548
+NEW ELAPSED TOTAL CPU TIME: 105.84010
+---------------------------------
+dyn_auto_multi : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=12, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 19.68028
+NEW ELAPSED TOTAL CPU TIME: 121.38432
+---------------------------------
+dyn_auto_multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=16, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 16.40906
+NEW ELAPSED TOTAL CPU TIME: 138.43947
+---------------------------------
+dyn_redis : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=4, provenance=None, target='dyn_redis')
+==========
+Starting 3 workers communicating
+NEW ELAPSED TIME: 40.32620
+NEW ELAPSED TOTAL CPU TIME: 120.72717
+---------------------------------
+dyn_redis : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=8, provenance=None, target='dyn_redis')
+==========
+Starting 7 workers communicating
+NEW ELAPSED TIME: 23.81144
+NEW ELAPSED TOTAL CPU TIME: 165.24189
+---------------------------------
+dyn_redis : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=12, provenance=None, target='dyn_redis')
+==========
+Starting 11 workers communicating
+NEW ELAPSED TIME: 17.79888
+NEW ELAPSED TOTAL CPU TIME: 193.73589
+---------------------------------
+dyn_redis : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=16, provenance=None, target='dyn_redis')
+==========
+Starting 15 workers communicating
+NEW ELAPSED TIME: 15.30814
+NEW ELAPSED TOTAL CPU TIME: 225.24793
+---------------------------------
+dyn_auto_redis : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, idle_time=1000, iter=1, module='int_ext_graph_skew.py', num=4, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 49.07507
+NEW ELAPSED TOTAL CPU TIME: 112.86650
+---------------------------------
+dyn_auto_redis : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, idle_time=1000, iter=1, module='int_ext_graph_skew.py', num=8, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 24.83366
+NEW ELAPSED TOTAL CPU TIME: 142.97903
+---------------------------------
+dyn_auto_redis : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, idle_time=1000, iter=1, module='int_ext_graph_skew.py', num=12, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 19.29090
+NEW ELAPSED TOTAL CPU TIME: 153.87364
+---------------------------------
+dyn_auto_redis : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data='{"read" : [ {"input" : "cp_coordinates_100.txt"} ]}', file=None, idle_time=1000, iter=1, module='int_ext_graph_skew.py', num=16, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 16.96147
+NEW ELAPSED TOTAL CPU TIME: 207.44977
+---------------------------------
+Experiments for 100 completed!

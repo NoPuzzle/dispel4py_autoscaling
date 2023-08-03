@@ -2,7 +2,7 @@
 
 function run_experiment() {
     local val=$1
-    LOGFILE="output_int_${val}.log"
+    LOGFILE="output_int_skew_${val}.log"
 
     # Empty the log file first
     > $LOGFILE
@@ -14,7 +14,7 @@ function run_experiment() {
         # Iterate over the number of processors for each pattern
         for n in 4 8 12 16; do
             echo "${pattern} : running with $n processors" >> $LOGFILE
-            python -m dispel4py.new.processor $pattern int_ext_graph.py -d '{"read" : [ {"input" : "cp_coordinates_'$val'.txt"} ]}' -n $n >> $LOGFILE 2>&1
+            python -m dispel4py.new.processor $pattern int_ext_graph_skew.py -d '{"read" : [ {"input" : "cp_coordinates_'$val'.txt"} ]}' -n $n >> $LOGFILE 2>&1
             echo "---------------------------------" >> $LOGFILE
         done
     done

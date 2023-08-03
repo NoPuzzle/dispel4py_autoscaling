@@ -43,7 +43,7 @@ def parse_args(args, namespace):
                         type=int, help='number of processes to run')
     
     parser.add_argument('-thr', '--idle_time', metavar='idle_time', 
-                        type=int, help='idle time threshold for auto-scaling', default=100)
+                        type=int, help='idle time threshold for auto-scaling', default=1000)
     
     result = parser.parse_args(args, namespace)
     return result

@@ -39,7 +39,8 @@ from astropy.io.votable import parse_single_table
 import io
 import sys
 import math
-
+import numpy as np
+np.random.seed(42) # for reproducibility
 import time
 
 type_dict={"E":-5, "E-S0":-3, "S0":-2, "S0a":0, "Sa":1, "Sab":2, "Sb":3, "Sbc":4, "Sc":6, "Scd":7, "Sd":8, "Sm":9, "SBa":1, "SBab":2, "SBb":3, "SBbc":4, "SBc":6, "SBcd":7, "SBd":8, "SBm":9}
@@ -83,7 +84,7 @@ class ReadRaDec(GenericPE):
 
         file = inputs['input']
 
-        total_lines = self._get_file_length(file)
+        # total_lines = self._get_file_length(file)
 
 
         # print('Reading file %s' % file)
@@ -101,14 +102,14 @@ class ReadRaDec(GenericPE):
 
                 # else:
                 #     time.sleep(0.5)
-                time.sleep(0.001)
+                # time.sleep(0.001)
                 # print(f"count = {count}, len of file is {total_lines}")
                 ra, dec = line.strip().split(',')
                 self.write('output', [count, ra, dec, 0.001])
         
-    def _get_file_length(self, filename):
-        with open(filename) as f:
-            return sum(1 for _ in f)
+    # def _get_file_length(self, filename):
+    #     with open(filename) as f:
+    #         return sum(1 for _ in f)
 
 
 class GetVOTable(IterativePE):
@@ -117,6 +118,11 @@ class GetVOTable(IterativePE):
     def _process(self, data):
         count, ra, dec, sr = data
         # print('reading VOTable RA=%s, DEC=%s' % (ra,dec))
+        # skewed_sleep_time = np.random.beta(2, 5) / 2  # will give values skewed towards 0 and between 0 and 0.5
+        skewed_sleep_time = np.random.beta(2, 5)
+        time.sleep(skewed_sleep_time)
+        # print(f"sleep time is {skewed_sleep_time} from GetVOTable")
+
         url = 'http://vizier.u-strasbg.fr/viz-bin/votable/-A?-source=VII/237&RA=%s&DEC=%s&SR=%s' % (ra, dec, sr)
         response = requests.get(url)
         return [count, ra, dec, response.text]
@@ -128,6 +134,12 @@ class FilterColumns(IterativePE):
         count, ra, dec, votable_xml = data
         table = parse_single_table(io.BytesIO(votable_xml.encode('utf-8')), pedantic=False)
         results = [count, ra, dec]
+
+        # skewed_sleep_time = np.random.beta(2, 5) / 2  # will give values skewed towards 0 and between 0 and 0.5
+        skewed_sleep_time = np.random.beta(2, 5)
+        time.sleep(skewed_sleep_time)
+
+        # print(f"sleep time is {skewed_sleep_time} from FilterColumns")
         
         for c in self.columns:
             try:
@@ -147,6 +159,14 @@ class InternalExtinction(IterativePE):
         count, ra, dec = data[0:3]
         mtype = data[3]
         logr25 = data[4]
+
+        # skewed_sleep_time = np.random.beta(2, 5) / 2  # will give values skewed towards 0 and between 0 and 0.5
+        skewed_sleep_time = np.random.beta(2, 5)
+        time.sleep(skewed_sleep_time)
+
+        # print(f"sleep time is {skewed_sleep_time} from InternalExtinction")
+
+
         # print("!! DATA mytype:%s, logr25:%s" %(mtype,logr25))
         try:
             t, ai = internal_extinction(mtype, logr25)
