@@ -8,13 +8,13 @@ Decimate11 (rank 1): Processed 50 iterations.
 Detrend12 (rank 2): Processed 50 iterations.
 Demean13 (rank 3): Processed 50 iterations.
 RemoveResponse14 (rank 4): Processed 50 iterations.
-Filter15 (rank 5): Processed 50 iterations.
 CalculateNorm16 (rank 6): Processed 50 iterations.
+Filter15 (rank 5): Processed 50 iterations.
 Whiten17 (rank 7): Processed 50 iterations.
-CalculateFft18 (rank 8): Processed 50 iterations.
 StreamToFile19 (rank 9): Processed 50 iterations.
-NEW ELAPSED TIME: 168.81664
-NEW ELAPSED TOTAL CPU TIME: 1015.27170
+CalculateFft18 (rank 8): Processed 50 iterations.
+NEW ELAPSED TIME: 172.40863
+NEW ELAPSED TOTAL CPU TIME: 1037.05808
 ---------------------------------
 multi : running with 16 processors
 RUN ARGS: 
@@ -31,214 +31,69 @@ CalculateNorm16 (rank 6): Processed 50 iterations.
 Whiten17 (rank 7): Processed 50 iterations.
 CalculateFft18 (rank 8): Processed 50 iterations.
 StreamToFile19 (rank 9): Processed 50 iterations.
-NEW ELAPSED TIME: 167.57536
-NEW ELAPSED TOTAL CPU TIME: 1007.71878
+NEW ELAPSED TIME: 167.56339
+NEW ELAPSED TOTAL CPU TIME: 1007.74774
 ---------------------------------
 dyn_multi : running with 4 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=4, provenance=None, target='dyn_multi')
 ==========
 Starting 3 workers communicating
-NEW ELAPSED TIME: 60.89597
-NEW ELAPSED TOTAL CPU TIME: 182.38133
+NEW ELAPSED TIME: 59.28080
+NEW ELAPSED TOTAL CPU TIME: 177.65056
 ---------------------------------
 dyn_multi : running with 8 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=8, provenance=None, target='dyn_multi')
 ==========
 Starting 7 workers communicating
-NEW ELAPSED TIME: 30.57768
-NEW ELAPSED TOTAL CPU TIME: 199.73715
+NEW ELAPSED TIME: 30.52765
+NEW ELAPSED TOTAL CPU TIME: 199.62787
 ---------------------------------
 dyn_multi : running with 12 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=12, provenance=None, target='dyn_multi')
 ==========
 Starting 11 workers communicating
-NEW ELAPSED TIME: 20.31629
-NEW ELAPSED TOTAL CPU TIME: 208.95634
+NEW ELAPSED TIME: 20.93300
+NEW ELAPSED TOTAL CPU TIME: 212.55733
 ---------------------------------
 dyn_multi : running with 16 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=16, provenance=None, target='dyn_multi')
 ==========
 Starting 15 workers communicating
-NEW ELAPSED TIME: 19.23615
-NEW ELAPSED TOTAL CPU TIME: 253.88709
+NEW ELAPSED TIME: 20.75020
+NEW ELAPSED TOTAL CPU TIME: 282.29736
 ---------------------------------
 dyn_auto_multi : running with 4 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=4, provenance=None, queue_threshold=10, target='dyn_auto_multi')
 ==========
-NEW ELAPSED TIME: 64.50907
-NEW ELAPSED TOTAL CPU TIME: 171.55702
+NEW ELAPSED TIME: 64.69698
+NEW ELAPSED TOTAL CPU TIME: 172.49450
 ---------------------------------
 dyn_auto_multi : running with 8 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=8, provenance=None, queue_threshold=10, target='dyn_auto_multi')
 ==========
-NEW ELAPSED TIME: 31.51482
-NEW ELAPSED TOTAL CPU TIME: 184.32293
+NEW ELAPSED TIME: 33.56632
+NEW ELAPSED TOTAL CPU TIME: 174.26466
 ---------------------------------
 dyn_auto_multi : running with 12 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=12, provenance=None, queue_threshold=10, target='dyn_auto_multi')
 ==========
-2023-08-04 11:30:14 dispel4py.new.logger[4086424] ERROR Exception = an integer is required (got type NoneType)
-2023-08-04 11:30:14 dispel4py.new.logger[4086432] ERROR Exception = an integer is required (got type NoneType)
-NEW ELAPSED TIME: 20.90024
-NEW ELAPSED TOTAL CPU TIME: 189.51665
+2023-08-04 11:54:20 dispel4py.new.logger[4091789] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 22.94390
+NEW ELAPSED TOTAL CPU TIME: 188.71993
 ---------------------------------
 dyn_auto_multi : running with 16 processors
 RUN ARGS: 
 Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=16, provenance=None, queue_threshold=10, target='dyn_auto_multi')
 ==========
-2023-08-04 11:30:37 dispel4py.new.logger[4087490] ERROR Exception = an integer is required (got type NoneType)
-NEW ELAPSED TIME: 21.63804
-NEW ELAPSED TOTAL CPU TIME: 225.75428
----------------------------------
-dyn_redis : running with 4 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=4, provenance=None, target='dyn_redis')
-==========
-Starting 3 workers communicating
-2023-08-04 11:30:59 dispel4py.new.logger[4088529] ERROR Exception = TypeError('Object of type Stream is not JSON serializable')
-NEW ELAPSED TIME: 3.34073
-NEW ELAPSED TOTAL CPU TIME: 9.34561
----------------------------------
-dyn_redis : running with 8 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=8, provenance=None, target='dyn_redis')
-==========
-Starting 7 workers communicating
-2023-08-04 11:31:04 dispel4py.new.logger[4088539] ERROR Exception = TypeError('Object of type Stream is not JSON serializable')
-NEW ELAPSED TIME: 3.32490
-NEW ELAPSED TOTAL CPU TIME: 22.74575
----------------------------------
-dyn_redis : running with 12 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=12, provenance=None, target='dyn_redis')
-==========
-Starting 11 workers communicating
-2023-08-04 11:31:08 dispel4py.new.logger[4088553] ERROR Exception = TypeError('Object of type Stream is not JSON serializable')
-NEW ELAPSED TIME: 3.74031
-NEW ELAPSED TOTAL CPU TIME: 37.68445
----------------------------------
-dyn_redis : running with 16 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=16, provenance=None, target='dyn_redis')
-==========
-Starting 15 workers communicating
-2023-08-04 11:31:14 dispel4py.new.logger[4088571] ERROR Exception = TypeError('Object of type Stream is not JSON serializable')
-NEW ELAPSED TIME: 3.69771
-NEW ELAPSED TOTAL CPU TIME: 51.21421
----------------------------------
-dyn_auto_redis : running with 4 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', idle_time=1000, iter=1, module='realtime_prep.py', num=4, provenance=None, target='dyn_auto_redis')
-==========
-2023-08-04 11:31:19 dispel4py.new.logger[4088593] ERROR Exception = Object of type Stream is not JSON serializable
-NEW ELAPSED TIME: 2.09120
-NEW ELAPSED TOTAL CPU TIME: 4.36601
----------------------------------
-dyn_auto_redis : running with 8 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', idle_time=1000, iter=1, module='realtime_prep.py', num=8, provenance=None, target='dyn_auto_redis')
-==========
-2023-08-04 11:31:22 dispel4py.new.logger[4088606] ERROR Exception = Object of type Stream is not JSON serializable
-NEW ELAPSED TIME: 2.32733
-NEW ELAPSED TOTAL CPU TIME: 13.24611
----------------------------------
-dyn_auto_redis : running with 12 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', idle_time=1000, iter=1, module='realtime_prep.py', num=12, provenance=None, target='dyn_auto_redis')
-==========
-2023-08-04 11:31:26 dispel4py.new.logger[4088624] ERROR Exception = Object of type Stream is not JSON serializable
-NEW ELAPSED TIME: 2.52814
-NEW ELAPSED TOTAL CPU TIME: 23.34438
----------------------------------
-dyn_auto_redis : running with 16 processors
-RUN ARGS: 
-Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', idle_time=1000, iter=1, module='realtime_prep.py', num=16, provenance=None, target='dyn_auto_redis')
-==========
-2023-08-04 11:31:30 dispel4py.new.logger[4088647] ERROR Exception = Object of type Stream is not JSON serializable
-NEW ELAPSED TIME: 2.56898
-NEW ELAPSED TOTAL CPU TIME: 32.09213
----------------------------------
-hybrid_redis : running with 12 processors
-RUN ARGS: 
-Namespace(attr=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=12, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
-==========
-Starting 12 workers communicating
-2023-08-04 11:31:34 dispel4py.new.logger[4088671] ERROR Exception = Object of type Stream is not JSON serializable
-process:2 for instance:None redis connection created.
-TERMINATED: stateless process:2 ends now
-process:3 for instance:None redis connection created.
-TERMINATED: stateless process:3 ends now
-process:1 for instance:None redis connection created.
-TERMINATED: stateless process:1 ends now
-process:7 for instance:None redis connection created.
-TERMINATED: stateless process:7 ends now
-process:11 for instance:None redis connection created.
-TERMINATED: stateless process:11 ends now
-process:9 for instance:None redis connection created.
-TERMINATED: stateless process:9 ends now
-process:8 for instance:None redis connection created.
-TERMINATED: stateless process:8 ends now
-process:10 for instance:None redis connection created.
-TERMINATED: stateless process:10 ends now
-process:0 for instance:None redis connection created.
-TERMINATED: stateless process:0 ends now
-process:4 for instance:None redis connection created.
-TERMINATED: stateless process:4 ends now
-process:5 for instance:None redis connection created.
-TERMINATED: stateless process:5 ends now
-process:6 for instance:None redis connection created.
-TERMINATED: stateless process:6 ends now
-NEW ELAPSED TIME: 10.68394
-NEW ELAPSED TOTAL CPU TIME: 126.39009
-Begin to clean redis stream keys...
----------------------------------
-hybrid_redis : running with 16 processors
-RUN ARGS: 
-Namespace(attr=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep.py', num=16, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
-==========
-Starting 16 workers communicating
-2023-08-04 11:31:46 dispel4py.new.logger[4088691] ERROR Exception = Object of type Stream is not JSON serializable
-process:4 for instance:None redis connection created.
-TERMINATED: stateless process:4 ends now
-process:5 for instance:None redis connection created.
-TERMINATED: stateless process:5 ends now
-process:7 for instance:None redis connection created.
-TERMINATED: stateless process:7 ends now
-process:6 for instance:None redis connection created.
-TERMINATED: stateless process:6 ends now
-process:8 for instance:None redis connection created.
-TERMINATED: stateless process:8 ends now
-process:11 for instance:None redis connection created.
-TERMINATED: stateless process:11 ends now
-process:14 for instance:None redis connection created.
-TERMINATED: stateless process:14 ends now
-process:15 for instance:None redis connection created.
-TERMINATED: stateless process:15 ends now
-process:13 for instance:None redis connection created.
-TERMINATED: stateless process:13 ends now
-process:12 for instance:None redis connection created.
-TERMINATED: stateless process:12 ends now
-process:3 for instance:None redis connection created.
-TERMINATED: stateless process:3 ends now
-process:2 for instance:None redis connection created.
-TERMINATED: stateless process:2 ends now
-process:1 for instance:None redis connection created.
-TERMINATED: stateless process:1 ends now
-process:10 for instance:None redis connection created.
-TERMINATED: stateless process:10 ends now
-process:9 for instance:None redis connection created.
-TERMINATED: stateless process:9 ends now
-process:0 for instance:None redis connection created.
-TERMINATED: stateless process:0 ends now
-NEW ELAPSED TIME: 10.60234
-NEW ELAPSED TOTAL CPU TIME: 165.59692
-Begin to clean redis stream keys...
+2023-08-04 11:54:44 dispel4py.new.logger[4092849] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 20.48271
+NEW ELAPSED TOTAL CPU TIME: 218.92204
 ---------------------------------
 All experiments completed!

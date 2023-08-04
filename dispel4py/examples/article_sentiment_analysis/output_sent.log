@@ -9,18 +9,18 @@ process:0 for instance:None redis connection created.
 TERMINATED: stateless process:0 ends now
 process:7 for instance:HappyState14_0 redis connection created.
 TERMINATED: stateful process:7 for instance:HappyState14_0 ends now
-process:5 for instance:HappyState20_0 redis connection created.
-TERMINATED: stateful process:5 for instance:HappyState20_0 ends now
+process:6 for instance:GlobalHappyState15_0 redis connection created.
+TERMINATED: stateful process:6 for instance:GlobalHappyState15_0 ends now
 process:4 for instance:HappyState20_1 redis connection created.
 TERMINATED: stateful process:4 for instance:HappyState20_1 ends now
+process:5 for instance:HappyState20_0 redis connection created.
+TERMINATED: stateful process:5 for instance:HappyState20_0 ends now
 process:3 for instance:HappyState20_2 redis connection created.
 TERMINATED: stateful process:3 for instance:HappyState20_2 ends now
 process:2 for instance:GlobalHappyState21_0 redis connection created.
 TERMINATED: stateful process:2 for instance:GlobalHappyState21_0 ends now
-process:6 for instance:GlobalHappyState15_0 redis connection created.
-TERMINATED: stateful process:6 for instance:GlobalHappyState15_0 ends now
-NEW ELAPSED TIME: 95.74000
-NEW ELAPSED TOTAL CPU TIME: 704.28408
+NEW ELAPSED TIME: 91.78372
+NEW ELAPSED TOTAL CPU TIME: 682.72170
 Begin to clean redis stream keys...
 ---------------------------------
 hybrid_redis : running with 12 processors
@@ -30,6 +30,8 @@ Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=No
 Starting 12 workers communicating
 process:10 for instance:GlobalHappyState15_0 redis connection created.
 TERMINATED: stateful process:10 for instance:GlobalHappyState15_0 ends now
+process:0 for instance:None redis connection created.
+TERMINATED: stateless process:0 ends now
 process:1 for instance:None redis connection created.
 TERMINATED: stateless process:1 ends now
 process:2 for instance:None redis connection created.
@@ -38,8 +40,6 @@ process:4 for instance:None redis connection created.
 TERMINATED: stateless process:4 ends now
 process:5 for instance:None redis connection created.
 TERMINATED: stateless process:5 ends now
-process:0 for instance:None redis connection created.
-TERMINATED: stateless process:0 ends now
 process:3 for instance:None redis connection created.
 TERMINATED: stateless process:3 ends now
 process:11 for instance:HappyState14_0 redis connection created.
@@ -48,12 +48,12 @@ process:8 for instance:HappyState20_1 redis connection created.
 TERMINATED: stateful process:8 for instance:HappyState20_1 ends now
 process:9 for instance:HappyState20_0 redis connection created.
 TERMINATED: stateful process:9 for instance:HappyState20_0 ends now
-process:6 for instance:GlobalHappyState21_0 redis connection created.
-TERMINATED: stateful process:6 for instance:GlobalHappyState21_0 ends now
 process:7 for instance:HappyState20_2 redis connection created.
 TERMINATED: stateful process:7 for instance:HappyState20_2 ends now
-NEW ELAPSED TIME: 58.16873
-NEW ELAPSED TOTAL CPU TIME: 580.55053
+process:6 for instance:GlobalHappyState21_0 redis connection created.
+TERMINATED: stateful process:6 for instance:GlobalHappyState21_0 ends now
+NEW ELAPSED TIME: 57.87391
+NEW ELAPSED TOTAL CPU TIME: 578.29757
 Begin to clean redis stream keys...
 ---------------------------------
 hybrid_redis : running with 16 processors
@@ -61,40 +61,40 @@ RUN ARGS:
 Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=16, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
 ==========
 Starting 16 workers communicating
-process:5 for instance:None redis connection created.
-TERMINATED: stateless process:5 ends now
-process:3 for instance:None redis connection created.
-TERMINATED: stateless process:3 ends now
-process:1 for instance:None redis connection created.
-TERMINATED: stateless process:1 ends now
-process:2 for instance:None redis connection created.
-TERMINATED: stateless process:2 ends now
 process:4 for instance:None redis connection created.
 TERMINATED: stateless process:4 ends now
-process:9 for instance:None redis connection created.
-TERMINATED: stateless process:9 ends now
+process:3 for instance:None redis connection created.
+TERMINATED: stateless process:3 ends now
+process:2 for instance:None redis connection created.
+TERMINATED: stateless process:2 ends now
+process:1 for instance:None redis connection created.
+TERMINATED: stateless process:1 ends now
 process:0 for instance:None redis connection created.
 TERMINATED: stateless process:0 ends now
-process:7 for instance:None redis connection created.
-TERMINATED: stateless process:7 ends now
 process:8 for instance:None redis connection created.
 TERMINATED: stateless process:8 ends now
+process:9 for instance:None redis connection created.
+TERMINATED: stateless process:9 ends now
+process:7 for instance:None redis connection created.
+TERMINATED: stateless process:7 ends now
+process:5 for instance:None redis connection created.
+TERMINATED: stateless process:5 ends now
 process:6 for instance:None redis connection created.
 TERMINATED: stateless process:6 ends now
 process:14 for instance:GlobalHappyState15_0 redis connection created.
 TERMINATED: stateful process:14 for instance:GlobalHappyState15_0 ends now
 process:15 for instance:HappyState14_0 redis connection created.
 TERMINATED: stateful process:15 for instance:HappyState14_0 ends now
+process:10 for instance:GlobalHappyState21_0 redis connection created.
+TERMINATED: stateful process:10 for instance:GlobalHappyState21_0 ends now
+process:11 for instance:HappyState20_2 redis connection created.
+TERMINATED: stateful process:11 for instance:HappyState20_2 ends now
 process:13 for instance:HappyState20_0 redis connection created.
 TERMINATED: stateful process:13 for instance:HappyState20_0 ends now
 process:12 for instance:HappyState20_1 redis connection created.
 TERMINATED: stateful process:12 for instance:HappyState20_1 ends now
-process:11 for instance:HappyState20_2 redis connection created.
-TERMINATED: stateful process:11 for instance:HappyState20_2 ends now
-process:10 for instance:GlobalHappyState21_0 redis connection created.
-TERMINATED: stateful process:10 for instance:GlobalHappyState21_0 ends now
-NEW ELAPSED TIME: 50.52250
-NEW ELAPSED TOTAL CPU TIME: 606.50089
+NEW ELAPSED TIME: 50.44136
+NEW ELAPSED TOTAL CPU TIME: 612.03430
 Begin to clean redis stream keys...
 ---------------------------------
 multi : running with 8 processors
@@ -152,12 +152,12 @@ read11 (rank 0): Processed 1 iteration.
 Tokenization_WD16 (rank 5): Processed 2470 iterations.
 SentiWordNetScore17 (rank 6): Processed 2470 iterations.
 ComputeSentiWordNetScore18 (rank 7): Processed 2470 iterations.
-HappyState20 (rank 10): Processed 493 iterations.
-HappyState20 (rank 9): Processed 913 iterations.
+HappyState20 (rank 10): Processed 883 iterations.
+HappyState20 (rank 9): Processed 983 iterations.
 FindState19 (rank 8): Processed 2435 iterations.
-HappyState20 (rank 11): Processed 1029 iterations.
-GlobalHappyState21 (rank 12): Processed 190 iterations.
-NEW ELAPSED TIME: 153.30237
-NEW ELAPSED TOTAL CPU TIME: 1237.46821
+GlobalHappyState21 (rank 12): Processed 200 iterations.
+HappyState20 (rank 11): Processed 569 iterations.
+NEW ELAPSED TIME: 151.12368
+NEW ELAPSED TOTAL CPU TIME: 1219.58280
 ---------------------------------
 All experiments completed!

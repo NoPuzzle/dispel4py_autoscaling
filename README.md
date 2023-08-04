@@ -98,6 +98,7 @@ conda install astropy
 conda install coloredlogs
 conda install requests
 conda install -c conda-forge obspy
+conda install nltk
 ```
 
 Simple instalation testing:
