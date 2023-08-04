@@ -29,4 +29,32 @@ for n in 4 8 12 16; do
     echo "---------------------------------" >> $LOGFILE
 done
 
+
+# Iterate over the number of processors for dyn_redis
+for n in 4 8 12 16; do
+# for n in 4; do
+    echo "dyn_redis : running with $n processors" >> $LOGFILE
+    python -m dispel4py.new.processor dyn_redis realtime_prep.py -f xcorr_input.jsn -n $n >> $LOGFILE 2>&1
+    echo "---------------------------------" >> $LOGFILE
+done
+
+
+# Iterate over the number of processors for dyn_auto_redis
+for n in 4 8 12 16; do
+# for n in 4; do
+    echo "dyn_auto_redis : running with $n processors" >> $LOGFILE
+    python -m dispel4py.new.processor dyn_auto_redis realtime_prep.py -f xcorr_input.jsn -n $n >> $LOGFILE 2>&1
+    echo "---------------------------------" >> $LOGFILE
+done
+
+
+# Iterate over the number of processors for hybrid_redis
+for n in 12 16; do
+    echo "hybrid_redis : running with $n processors" >> $LOGFILE
+    python -m dispel4py.new.processor hybrid_redis realtime_prep.py -f xcorr_input.jsn -n $n >> $LOGFILE 2>&1
+    echo "---------------------------------" >> $LOGFILE
+done
+
+
+
 echo "All experiments completed!" >> $LOGFILE
