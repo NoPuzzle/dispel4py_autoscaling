@@ -299,7 +299,7 @@ class AutoScaler():
             else:
                 self.shrink(1)
         else:
-            self.grow(1)
+            self.shrink(1)
 
         self.prev_queue_size = curr_queue_size
 
