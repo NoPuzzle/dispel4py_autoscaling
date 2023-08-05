@@ -227,6 +227,9 @@ class AutoScaler():
         self.active_count = Value('i', 0)
         # self.task_counter = Value('i', 0)
         self.condition = Condition()
+
+        self.prev_queue_size = queue_threshold
+
     
     def shrink(self, size_to_shrink):
         with self.active_size.get_lock():
@@ -255,6 +258,8 @@ class AutoScaler():
         while True:
 
             self.auto_scale()
+
+            print(f"MONITOR: ACTIVE SIZE = {self.active_size.value}")
             if self.queue.empty() and self.active_count.value == 0:
                 
                 # print("queue is empty")
@@ -282,16 +287,31 @@ class AutoScaler():
                 [result.get() for result in results]
                 results = []
 
-
     def auto_scale(self):
 
-        if self.queue.qsize() > self.queue_threshold:
-            # logger.info(f"queue size = {self.queue.qsize()}, active size = {self.active_size.value}")
+        curr_queue_size = self.queue.qsize()
+
+        if curr_queue_size > self.queue_threshold:
+
+            if curr_queue_size >= self.prev_queue_size:
+                self.grow(1)
+
+            else:
+                self.shrink(1)
+        else:
             self.grow(1)
 
-        elif self.queue.qsize() < self.queue_threshold and self.active_count.value > 0:
-            # logger.info(f"queue size = {self.queue.qsize()}, active size = {self.active_size.value}")
-            self.shrink(1)
+        self.prev_queue_size = curr_queue_size
+
+    # def auto_scale(self):
+
+    #     if self.queue.qsize() > self.queue_threshold:
+    #         # logger.info(f"queue size = {self.queue.qsize()}, active size = {self.active_size.value}")
+    #         self.grow(1)
+
+    #     elif self.queue.qsize() < self.queue_threshold and self.active_count.value > 0:
+    #         # logger.info(f"queue size = {self.queue.qsize()}, active size = {self.active_size.value}")
+    #         self.shrink(1)
         
 
     def start(self, task_func, args=None):
