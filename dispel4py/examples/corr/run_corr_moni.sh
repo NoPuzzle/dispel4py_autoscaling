@@ -22,7 +22,7 @@ done
 for n in 16; do
 # for n in 4; do
     echo "dyn_auto_redis : running with $n processors" >> $LOGFILE
-    python -m dispel4py.new.processor dyn_auto_redis realtime_prep_dict.py -f xcorr_input.jsn -n $n -thr 1500 >> $LOGFILE 2>&1
+    python -m dispel4py.new.processor dyn_auto_redis realtime_prep_dict.py -f xcorr_input.jsn -n $n -thr 2000 >> $LOGFILE 2>&1
     echo "---------------------------------" >> $LOGFILE
 done
 

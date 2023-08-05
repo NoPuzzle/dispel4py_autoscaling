@@ -3,172 +3,234 @@ RUN ARGS:
 Namespace(attr=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=12, provenance=None, simple=False, target='multi')
 ==========
 Processes: {'streamRead10': range(0, 1), 'Decimate11': range(1, 2), 'Detrend12': range(2, 3), 'Demean13': range(3, 4), 'RemoveResponse14': range(4, 5), 'Filter15': range(5, 6), 'CalculateNorm16': range(6, 7), 'Whiten17': range(7, 8), 'CalculateFft18': range(8, 9), 'StreamToFile19': range(9, 10)}
-Process Process-2:
-Traceback (most recent call last):
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3016, in _dep_map
-    return self.__dep_map
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2813, in __getattr__
-    raise AttributeError(attr)
-AttributeError: _DistInfoDistribution__dep_map
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
-    self.run()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 99, in run
-    self._target(*self._args, **self._kwargs)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/multi_process.py", line 69, in wrapper
-    result = func(*args, **kwargs)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/multi_process.py", line 84, in _processWorker
-    wrapper.process()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 123, in process
-    outputs = self.pe.process(inputs)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/base.py", line 76, in process
-    result = self._process(data)
-  File "realtime_prep_dict.py", line 200, in _process
-    str1.decimate(int(str1[0].stats.sampling_rate/self.sps))
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/obspy/core/stream.py", line 2404, in decimate
-    strict_length=strict_length)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/decorator.py", line 232, in fun
-    return caller(func, *(extras + args), **kw)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/obspy/core/trace.py", line 273, in _add_processing_info
-    result = func(*args, **kwargs)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/obspy/core/trace.py", line 1832, in decimate
-    self.filter('lowpass_cheby_2', freq=freq, maxorder=12)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/decorator.py", line 232, in fun
-    return caller(func, *(extras + args), **kw)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/obspy/core/trace.py", line 273, in _add_processing_info
-    result = func(*args, **kwargs)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/decorator.py", line 232, in fun
-    return caller(func, *(extras + args), **kw)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/obspy/core/util/decorator.py", line 234, in raise_if_masked
-    return func(*args, **kwargs)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/obspy/core/trace.py", line 1541, in filter
-    func = _get_function_from_entry_point('filter', type)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/obspy/core/util/base.py", line 333, in _get_function_from_entry_point
-    entry_point.name)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/obspy/core/util/misc.py", line 651, in buffered_load_entry_point
-    _ENTRY_POINT_CACHE[hash_str] = load_entry_point(dist, group, name)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 474, in load_entry_point
-    return get_distribution(dist).load_entry_point(group, name)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2846, in load_entry_point
-    return ep.load()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2449, in load
-    self.require(*args, **kwargs)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2472, in require
-    items = working_set.resolve(reqs, env, installer, extras=self.extras)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 780, in resolve
-    new_requirements = dist.requires(req.extras)[::-1]
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 2734, in requires
-    dm = self._dep_map
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3018, in _dep_map
-    self.__dep_map = self._compute_dependencies()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3028, in _compute_dependencies
-    reqs.extend(parse_requirements(req))
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3084, in parse_requirements
-    yield Requirement(line)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/__init__.py", line 3094, in __init__
-    super(Requirement, self).__init__(requirement_string)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/requirements.py", line 98, in __init__
-    req = REQUIREMENT.parseString(requirement_string)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1644, in parseString
-    loc, tokens = self._parse( instring, 0 )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3417, in parseImpl
-    loc, exprtokens = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3552, in parseImpl
-    ret = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3417, in parseImpl
-    loc, exprtokens = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 4005, in parseImpl
-    loc, tokens = self.expr._parse( instring, loc, doActions, callPreParse=False )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3417, in parseImpl
-    loc, exprtokens = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1428, in _parseNoCache
-    tokens = fn( instring, tokensStart, retTokens )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1072, in wrapper
-    ret = func(*args[limit[0]:])
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/requirements.py", line 66, in <lambda>
-    lambda s, l, t: Marker(s[t._original_start : t._original_end])
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/packaging/markers.py", line 299, in __init__
-    self._markers = _coerce_parse_result(MARKER.parseString(marker))
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1644, in parseString
-    loc, tokens = self._parse( instring, 0 )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3417, in parseImpl
-    loc, exprtokens = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3739, in parseImpl
-    return self.expr._parse( instring, loc, doActions, callPreParse=False )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3400, in parseImpl
-    loc, resultlist = self.exprs[0]._parse( instring, loc, doActions, callPreParse=False )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3552, in parseImpl
-    ret = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3739, in parseImpl
-    return self.expr._parse( instring, loc, doActions, callPreParse=False )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3417, in parseImpl
-    loc, exprtokens = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3552, in parseImpl
-    ret = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1402, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 3552, in parseImpl
-    ret = e._parse( instring, loc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 1406, in _parseNoCache
-    loc,tokens = self.parseImpl( instring, preloc, doActions )
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 2435, in parseImpl
-    raise ParseException(instring, loc, self.errmsg, self)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/pkg_resources/_vendor/pyparsing.py", line 217, in __init__
-    self.parserElement = elem
-KeyboardInterrupt
-Process Process-1:
-Traceback (most recent call last):
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
-    main()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 876, in main
-    errormsg = process(graph, inputs=inputs, args=args)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/multi_process.py", line 180, in process
-    j.join()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/process.py", line 140, in join
-    res = self._popen.wait(timeout)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/popen_fork.py", line 48, in wait
-    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/popen_fork.py", line 28, in poll
-    pid, sts = os.waitpid(self.pid, flag)
-KeyboardInterrupt
-Error in atexit._run_exitfuncs:
-Traceback (most recent call last):
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/multiprocessing/popen_fork.py", line 28, in poll
-    pid, sts = os.waitpid(self.pid, flag)
-KeyboardInterrupt
-Error in atexit._run_exitfuncs:
-Traceback (most recent call last):
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/matplotlib/_pylab_helpers.py", line 82, in destroy_all
-    @classmethod
-KeyboardInterrupt
+streamRead10 (rank 0): Processed 1 iteration.
+Decimate11 (rank 1): Processed 50 iterations.
+Detrend12 (rank 2): Processed 50 iterations.
+Demean13 (rank 3): Processed 50 iterations.
+RemoveResponse14 (rank 4): Processed 50 iterations.
+Filter15 (rank 5): Processed 50 iterations.
+CalculateNorm16 (rank 6): Processed 50 iterations.
+Whiten17 (rank 7): Processed 50 iterations.
+CalculateFft18 (rank 8): Processed 50 iterations.
+StreamToFile19 (rank 9): Processed 50 iterations.
+NEW ELAPSED TIME: 169.94342
+NEW ELAPSED TOTAL CPU TIME: 1025.60007
+---------------------------------
+multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=16, provenance=None, simple=False, target='multi')
+==========
+Processes: {'streamRead10': range(0, 1), 'Decimate11': range(1, 2), 'Detrend12': range(2, 3), 'Demean13': range(3, 4), 'RemoveResponse14': range(4, 5), 'Filter15': range(5, 6), 'CalculateNorm16': range(6, 7), 'Whiten17': range(7, 8), 'CalculateFft18': range(8, 9), 'StreamToFile19': range(9, 10)}
+streamRead10 (rank 0): Processed 1 iteration.
+Decimate11 (rank 1): Processed 50 iterations.
+Detrend12 (rank 2): Processed 50 iterations.
+Demean13 (rank 3): Processed 50 iterations.
+RemoveResponse14 (rank 4): Processed 50 iterations.
+Filter15 (rank 5): Processed 50 iterations.
+CalculateNorm16 (rank 6): Processed 50 iterations.
+Whiten17 (rank 7): Processed 50 iterations.
+CalculateFft18 (rank 8): Processed 50 iterations.
+StreamToFile19 (rank 9): Processed 50 iterations.
+NEW ELAPSED TIME: 169.17765
+NEW ELAPSED TOTAL CPU TIME: 1020.37875
+---------------------------------
+dyn_multi : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=4, provenance=None, target='dyn_multi')
+==========
+Starting 3 workers communicating
+NEW ELAPSED TIME: 74.37583
+NEW ELAPSED TOTAL CPU TIME: 222.91469
+---------------------------------
+dyn_multi : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=8, provenance=None, target='dyn_multi')
+==========
+Starting 7 workers communicating
+NEW ELAPSED TIME: 38.58908
+NEW ELAPSED TOTAL CPU TIME: 267.65034
+---------------------------------
+dyn_multi : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=12, provenance=None, target='dyn_multi')
+==========
+Starting 11 workers communicating
+NEW ELAPSED TIME: 29.26578
+NEW ELAPSED TOTAL CPU TIME: 315.11404
+---------------------------------
+dyn_multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=16, provenance=None, target='dyn_multi')
+==========
+Starting 15 workers communicating
+NEW ELAPSED TIME: 29.18866
+NEW ELAPSED TOTAL CPU TIME: 424.03125
+---------------------------------
+dyn_auto_multi : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=4, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 89.51477
+NEW ELAPSED TOTAL CPU TIME: 199.63576
+---------------------------------
+dyn_auto_multi : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=8, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+2023-08-05 18:34:16 dispel4py.new.logger[71342] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 62.04193
+NEW ELAPSED TOTAL CPU TIME: 206.83723
+---------------------------------
+dyn_auto_multi : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=12, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+2023-08-05 18:35:16 dispel4py.new.logger[72397] ERROR Exception = an integer is required (got type NoneType)
+2023-08-05 18:35:16 dispel4py.new.logger[72405] ERROR Exception = an integer is required (got type NoneType)
+2023-08-05 18:35:16 dispel4py.new.logger[72403] ERROR Exception = an integer is required (got type NoneType)
+2023-08-05 18:35:16 dispel4py.new.logger[72400] ERROR Exception = an integer is required (got type NoneType)
+NEW ELAPSED TIME: 41.57250
+NEW ELAPSED TOTAL CPU TIME: 221.46340
+---------------------------------
+dyn_auto_multi : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=16, provenance=None, queue_threshold=10, target='dyn_auto_multi')
+==========
+NEW ELAPSED TIME: 43.73382
+NEW ELAPSED TOTAL CPU TIME: 229.82745
+---------------------------------
+dyn_redis : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=4, provenance=None, target='dyn_redis')
+==========
+Starting 3 workers communicating
+NEW ELAPSED TIME: 66.64583
+NEW ELAPSED TOTAL CPU TIME: 199.71724
+---------------------------------
+dyn_redis : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=8, provenance=None, target='dyn_redis')
+==========
+Starting 7 workers communicating
+NEW ELAPSED TIME: 32.05589
+NEW ELAPSED TOTAL CPU TIME: 222.10088
+---------------------------------
+dyn_redis : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=12, provenance=None, target='dyn_redis')
+==========
+Starting 11 workers communicating
+NEW ELAPSED TIME: 22.59893
+NEW ELAPSED TOTAL CPU TIME: 245.21762
+---------------------------------
+dyn_redis : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=16, provenance=None, target='dyn_redis')
+==========
+Starting 15 workers communicating
+NEW ELAPSED TIME: 21.70137
+NEW ELAPSED TOTAL CPU TIME: 312.56877
+---------------------------------
+dyn_auto_redis : running with 4 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', idle_time=4000, iter=1, module='realtime_prep_dict.py', num=4, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 80.79855
+NEW ELAPSED TOTAL CPU TIME: 193.87902
+---------------------------------
+dyn_auto_redis : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', idle_time=4000, iter=1, module='realtime_prep_dict.py', num=8, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 49.75868
+NEW ELAPSED TOTAL CPU TIME: 201.71833
+---------------------------------
+dyn_auto_redis : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', idle_time=4000, iter=1, module='realtime_prep_dict.py', num=12, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 40.83019
+NEW ELAPSED TOTAL CPU TIME: 240.40754
+---------------------------------
+dyn_auto_redis : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, consumer_timeout=None, data=None, file='xcorr_input.jsn', idle_time=4000, iter=1, module='realtime_prep_dict.py', num=16, provenance=None, target='dyn_auto_redis')
+==========
+NEW ELAPSED TIME: 37.24541
+NEW ELAPSED TOTAL CPU TIME: 234.69553
+---------------------------------
+hybrid_redis : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=12, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
+==========
+Starting 12 workers communicating
+process:1 for instance:None redis connection created.
+TERMINATED: stateless process:1 ends now
+process:0 for instance:None redis connection created.
+TERMINATED: stateless process:0 ends now
+process:2 for instance:None redis connection created.
+TERMINATED: stateless process:2 ends now
+process:9 for instance:None redis connection created.
+TERMINATED: stateless process:9 ends now
+process:11 for instance:None redis connection created.
+TERMINATED: stateless process:11 ends now
+process:10 for instance:None redis connection created.
+TERMINATED: stateless process:10 ends now
+process:7 for instance:None redis connection created.
+TERMINATED: stateless process:7 ends now
+process:8 for instance:None redis connection created.
+TERMINATED: stateless process:8 ends now
+process:5 for instance:None redis connection created.
+TERMINATED: stateless process:5 ends now
+process:3 for instance:None redis connection created.
+TERMINATED: stateless process:3 ends now
+process:6 for instance:None redis connection created.
+TERMINATED: stateless process:6 ends now
+process:4 for instance:None redis connection created.
+TERMINATED: stateless process:4 ends now
+NEW ELAPSED TIME: 30.10017
+NEW ELAPSED TOTAL CPU TIME: 348.68910
+Begin to clean redis stream keys...
+---------------------------------
+hybrid_redis : running with 16 processors
+RUN ARGS: 
+Namespace(attr=None, data=None, file='xcorr_input.jsn', iter=1, module='realtime_prep_dict.py', num=16, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
+==========
+Starting 16 workers communicating
+process:6 for instance:None redis connection created.
+TERMINATED: stateless process:6 ends now
+process:8 for instance:None redis connection created.
+TERMINATED: stateless process:8 ends now
+process:13 for instance:None redis connection created.
+TERMINATED: stateless process:13 ends now
+process:12 for instance:None redis connection created.
+TERMINATED: stateless process:12 ends now
+process:1 for instance:None redis connection created.
+TERMINATED: stateless process:1 ends now
+process:9 for instance:None redis connection created.
+TERMINATED: stateless process:9 ends now
+process:2 for instance:None redis connection created.
+TERMINATED: stateless process:2 ends now
+process:3 for instance:None redis connection created.
+TERMINATED: stateless process:3 ends now
+process:4 for instance:None redis connection created.
+TERMINATED: stateless process:4 ends now
+process:5 for instance:None redis connection created.
+TERMINATED: stateless process:5 ends now
+process:11 for instance:None redis connection created.
+TERMINATED: stateless process:11 ends now
+process:7 for instance:None redis connection created.
+TERMINATED: stateless process:7 ends now
+process:15 for instance:None redis connection created.
+TERMINATED: stateless process:15 ends now
+process:0 for instance:None redis connection created.
+TERMINATED: stateless process:0 ends now
+process:10 for instance:None redis connection created.
+TERMINATED: stateless process:10 ends now
+process:14 for instance:None redis connection created.
+TERMINATED: stateless process:14 ends now
+NEW ELAPSED TIME: 31.98999
+NEW ELAPSED TOTAL CPU TIME: 495.54647
+Begin to clean redis stream keys...
+---------------------------------
+All experiments completed!
