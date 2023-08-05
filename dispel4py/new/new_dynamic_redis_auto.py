@@ -351,21 +351,34 @@ class AutoScaler():
 
         # logger.debug(f"group_info = {group_info}")
 
-        total_idle_for_active_workers = 0
-        for i, consumer in enumerate(group_info):
+        # Sort the group_info by 'idle' in ascending order
+        sorted_group_info = sorted(group_info, key=lambda consumer: consumer['idle'])
 
-            # if i >= self.current_workers_spawned:
-            if i >= self.active_count.value:
-                break
+        # Sum up the idle times of the top self.active_count.value consumers
+        total_idle_for_active_workers = sum(consumer['idle'] for consumer in sorted_group_info[:self.active_size.value])
 
-            total_idle_for_active_workers += consumer['idle']
+
+
+        # total_idle_for_active_workers = 0
+        # for i, consumer in enumerate(group_info):
+
+        #     # if i >= self.current_workers_spawned:
+        #     if i >= self.active_count.value:
+        #         break
+
+        #     total_idle_for_active_workers += consumer['idle']
+
+
         # logger.info(f"avg_idle_for_active_workers = {total_idle_for_active_workers/self.active_size.value}")
-        
+        avg_idle_for_active_workers = total_idle_for_active_workers/self.active_size.value
+        # if total_idle_for_active_workers/self.active_count.value > self.idle_time_threshold:
         if total_idle_for_active_workers/self.active_size.value > self.idle_time_threshold:
             self.shrink(1)
         # elif total_idle_for_active_workers/self.active_count.value < self.idle_time_threshold:
         else:
             self.grow(1)
+
+        # print(f"MONITOR: ACTIVE SIZE = {self.active_size.value}, AVG IDLE = {avg_idle_for_active_workers}")
         
         # # self.total_workers_spawned 
         # for i in range(self.current_workers_spawned):

@@ -259,7 +259,7 @@ class AutoScaler():
 
             self.auto_scale()
 
-            # print(f"MONITOR: ACTIVE SIZE = {self.active_size.value}")
+            
             if self.queue.empty() and self.active_count.value == 0:
                 
                 # print("queue is empty")
@@ -291,6 +291,8 @@ class AutoScaler():
 
         curr_queue_size = self.queue.qsize()
 
+        
+
         if curr_queue_size > self.queue_threshold:
 
             if curr_queue_size >= self.prev_queue_size:
@@ -302,6 +304,8 @@ class AutoScaler():
             self.shrink(1)
 
         self.prev_queue_size = curr_queue_size
+
+        # print(f"MONITOR: ACTIVE SIZE = {self.active_size.value} QUEUE_SIZE = {curr_queue_size}")
 
     # def auto_scale(self):
 

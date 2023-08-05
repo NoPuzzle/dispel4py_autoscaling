@@ -1,22 +1,109 @@
+hybrid_redis : running with 8 processors
+RUN ARGS: 
+Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=8, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
+==========
+Starting 8 workers communicating
+process:0 for instance:None redis connection created.
+TERMINATED: stateless process:0 ends now
+process:1 for instance:None redis connection created.
+TERMINATED: stateless process:1 ends now
+process:7 for instance:HappyState14_0 redis connection created.
+TERMINATED: stateful process:7 for instance:HappyState14_0 ends now
+process:6 for instance:GlobalHappyState15_0 redis connection created.
+TERMINATED: stateful process:6 for instance:GlobalHappyState15_0 ends now
+process:4 for instance:HappyState20_1 redis connection created.
+TERMINATED: stateful process:4 for instance:HappyState20_1 ends now
+process:5 for instance:HappyState20_0 redis connection created.
+TERMINATED: stateful process:5 for instance:HappyState20_0 ends now
+process:3 for instance:HappyState20_2 redis connection created.
+TERMINATED: stateful process:3 for instance:HappyState20_2 ends now
+process:2 for instance:GlobalHappyState21_0 redis connection created.
+TERMINATED: stateful process:2 for instance:GlobalHappyState21_0 ends now
+NEW ELAPSED TIME: 91.55691
+NEW ELAPSED TOTAL CPU TIME: 684.99628
+Begin to clean redis stream keys...
+---------------------------------
+hybrid_redis : running with 10 processors
+RUN ARGS: 
+Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=10, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
+==========
+Starting 10 workers communicating
+process:1 for instance:None redis connection created.
+TERMINATED: stateless process:1 ends now
+process:2 for instance:None redis connection created.
+TERMINATED: stateless process:2 ends now
+process:3 for instance:None redis connection created.
+TERMINATED: stateless process:3 ends now
+process:0 for instance:None redis connection created.
+TERMINATED: stateless process:0 ends now
+process:8 for instance:GlobalHappyState15_0 redis connection created.
+TERMINATED: stateful process:8 for instance:GlobalHappyState15_0 ends now
+process:9 for instance:HappyState14_0 redis connection created.
+TERMINATED: stateful process:9 for instance:HappyState14_0 ends now
+process:7 for instance:HappyState20_0 redis connection created.
+TERMINATED: stateful process:7 for instance:HappyState20_0 ends now
+process:5 for instance:HappyState20_2 redis connection created.
+TERMINATED: stateful process:5 for instance:HappyState20_2 ends now
+process:6 for instance:HappyState20_1 redis connection created.
+TERMINATED: stateful process:6 for instance:HappyState20_1 ends now
+process:4 for instance:GlobalHappyState21_0 redis connection created.
+TERMINATED: stateful process:4 for instance:GlobalHappyState21_0 ends now
+NEW ELAPSED TIME: 71.72731
+NEW ELAPSED TOTAL CPU TIME: 618.11694
+Begin to clean redis stream keys...
+---------------------------------
+hybrid_redis : running with 12 processors
+RUN ARGS: 
+Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=12, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
+==========
+Starting 12 workers communicating
+process:1 for instance:None redis connection created.
+TERMINATED: stateless process:1 ends now
+process:0 for instance:None redis connection created.
+TERMINATED: stateless process:0 ends now
+process:5 for instance:None redis connection created.
+TERMINATED: stateless process:5 ends now
+process:4 for instance:None redis connection created.
+TERMINATED: stateless process:4 ends now
+process:3 for instance:None redis connection created.
+TERMINATED: stateless process:3 ends now
+process:2 for instance:None redis connection created.
+TERMINATED: stateless process:2 ends now
+process:11 for instance:HappyState14_0 redis connection created.
+TERMINATED: stateful process:11 for instance:HappyState14_0 ends now
+process:9 for instance:HappyState20_0 redis connection created.
+TERMINATED: stateful process:9 for instance:HappyState20_0 ends now
+process:7 for instance:HappyState20_2 redis connection created.
+TERMINATED: stateful process:7 for instance:HappyState20_2 ends now
+process:6 for instance:GlobalHappyState21_0 redis connection created.
+TERMINATED: stateful process:6 for instance:GlobalHappyState21_0 ends now
+process:8 for instance:HappyState20_1 redis connection created.
+TERMINATED: stateful process:8 for instance:HappyState20_1 ends now
+process:10 for instance:GlobalHappyState15_0 redis connection created.
+TERMINATED: stateful process:10 for instance:GlobalHappyState15_0 ends now
+NEW ELAPSED TIME: 60.81835
+NEW ELAPSED TOTAL CPU TIME: 594.14088
+Begin to clean redis stream keys...
+---------------------------------
 hybrid_redis : running with 14 processors
 RUN ARGS: 
 Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=14, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
 ==========
 Starting 14 workers communicating
-process:3 for instance:None redis connection created.
-TERMINATED: stateless process:3 ends now
-process:4 for instance:None redis connection created.
-TERMINATED: stateless process:4 ends now
-process:6 for instance:None redis connection created.
-TERMINATED: stateless process:6 ends now
-process:7 for instance:None redis connection created.
-TERMINATED: stateless process:7 ends now
-process:5 for instance:None redis connection created.
-TERMINATED: stateless process:5 ends now
-process:1 for instance:None redis connection created.
-TERMINATED: stateless process:1 ends now
 process:2 for instance:None redis connection created.
 TERMINATED: stateless process:2 ends now
+process:4 for instance:None redis connection created.
+TERMINATED: stateless process:4 ends now
+process:1 for instance:None redis connection created.
+TERMINATED: stateless process:1 ends now
+process:3 for instance:None redis connection created.
+TERMINATED: stateless process:3 ends now
+process:5 for instance:None redis connection created.
+TERMINATED: stateless process:5 ends now
+process:7 for instance:None redis connection created.
+TERMINATED: stateless process:7 ends now
+process:6 for instance:None redis connection created.
+TERMINATED: stateless process:6 ends now
 process:0 for instance:None redis connection created.
 TERMINATED: stateless process:0 ends now
 process:13 for instance:HappyState14_0 redis connection created.
@@ -25,14 +112,14 @@ process:11 for instance:HappyState20_0 redis connection created.
 TERMINATED: stateful process:11 for instance:HappyState20_0 ends now
 process:10 for instance:HappyState20_1 redis connection created.
 TERMINATED: stateful process:10 for instance:HappyState20_1 ends now
-process:9 for instance:HappyState20_2 redis connection created.
-TERMINATED: stateful process:9 for instance:HappyState20_2 ends now
 process:8 for instance:GlobalHappyState21_0 redis connection created.
 TERMINATED: stateful process:8 for instance:GlobalHappyState21_0 ends now
+process:9 for instance:HappyState20_2 redis connection created.
+TERMINATED: stateful process:9 for instance:HappyState20_2 ends now
 process:12 for instance:GlobalHappyState15_0 redis connection created.
 TERMINATED: stateful process:12 for instance:GlobalHappyState15_0 ends now
-NEW ELAPSED TIME: 54.91701
-NEW ELAPSED TOTAL CPU TIME: 599.88527
+NEW ELAPSED TIME: 54.41288
+NEW ELAPSED TOTAL CPU TIME: 603.74345
 Begin to clean redis stream keys...
 ---------------------------------
 hybrid_redis : running with 16 processors
@@ -40,104 +127,41 @@ RUN ARGS:
 Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=16, provenance=None, redis_ip='localhost', redis_port=6379, target='hybrid_redis')
 ==========
 Starting 16 workers communicating
-process:4 for instance:None redis connection created.
-TERMINATED: stateless process:4 ends now
-process:7 for instance:None redis connection created.
-TERMINATED: stateless process:7 ends now
-process:9 for instance:None redis connection created.
-TERMINATED: stateless process:9 ends now
-process:6 for instance:None redis connection created.
-TERMINATED: stateless process:6 ends now
-process:5 for instance:None redis connection created.
-TERMINATED: stateless process:5 ends now
 process:2 for instance:None redis connection created.
 TERMINATED: stateless process:2 ends now
 process:3 for instance:None redis connection created.
 TERMINATED: stateless process:3 ends now
+process:4 for instance:None redis connection created.
+TERMINATED: stateless process:4 ends now
 process:1 for instance:None redis connection created.
 TERMINATED: stateless process:1 ends now
-process:0 for instance:None redis connection created.
-TERMINATED: stateless process:0 ends now
 process:8 for instance:None redis connection created.
 TERMINATED: stateless process:8 ends now
+process:6 for instance:None redis connection created.
+TERMINATED: stateless process:6 ends now
+process:0 for instance:None redis connection created.
+TERMINATED: stateless process:0 ends now
+process:7 for instance:None redis connection created.
+TERMINATED: stateless process:7 ends now
+process:9 for instance:None redis connection created.
+TERMINATED: stateless process:9 ends now
+process:5 for instance:None redis connection created.
+TERMINATED: stateless process:5 ends now
 process:14 for instance:GlobalHappyState15_0 redis connection created.
 TERMINATED: stateful process:14 for instance:GlobalHappyState15_0 ends now
 process:15 for instance:HappyState14_0 redis connection created.
 TERMINATED: stateful process:15 for instance:HappyState14_0 ends now
-process:13 for instance:HappyState20_0 redis connection created.
-TERMINATED: stateful process:13 for instance:HappyState20_0 ends now
-process:10 for instance:GlobalHappyState21_0 redis connection created.
-TERMINATED: stateful process:10 for instance:GlobalHappyState21_0 ends now
-process:11 for instance:HappyState20_2 redis connection created.
-TERMINATED: stateful process:11 for instance:HappyState20_2 ends now
 process:12 for instance:HappyState20_1 redis connection created.
 TERMINATED: stateful process:12 for instance:HappyState20_1 ends now
-NEW ELAPSED TIME: 50.93383
-NEW ELAPSED TOTAL CPU TIME: 609.30044
+process:13 for instance:HappyState20_0 redis connection created.
+TERMINATED: stateful process:13 for instance:HappyState20_0 ends now
+process:11 for instance:HappyState20_2 redis connection created.
+TERMINATED: stateful process:11 for instance:HappyState20_2 ends now
+process:10 for instance:GlobalHappyState21_0 redis connection created.
+TERMINATED: stateful process:10 for instance:GlobalHappyState21_0 ends now
+NEW ELAPSED TIME: 50.35100
+NEW ELAPSED TOTAL CPU TIME: 611.51494
 Begin to clean redis stream keys...
----------------------------------
-multi : running with 8 processors
-Traceback (most recent call last):
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
-    main()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 876, in main
-    errormsg = process(graph, inputs=inputs, args=args)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/multi_process.py", line 115, in process
-    ubergraph = processor.create_partitioned(workflow)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 369, in create_partitioned
-    assign_and_connect(workflow_all, len(workflow_all.graph.nodes()))
-TypeError: cannot unpack non-iterable NoneType object
-RUN ARGS: 
-Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=8, provenance=None, simple=False, target='multi')
-==========
-Graph is larger than job size: 13 > 8.
-Graph is larger than job size: 13 > 11.
----------------------------------
-multi : running with 10 processors
-Traceback (most recent call last):
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
-    main()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 876, in main
-    errormsg = process(graph, inputs=inputs, args=args)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/multi_process.py", line 115, in process
-    ubergraph = processor.create_partitioned(workflow)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 369, in create_partitioned
-    assign_and_connect(workflow_all, len(workflow_all.graph.nodes()))
-TypeError: cannot unpack non-iterable NoneType object
-RUN ARGS: 
-Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=10, provenance=None, simple=False, target='multi')
-==========
-Graph is larger than job size: 13 > 10.
-Graph is larger than job size: 13 > 11.
----------------------------------
-multi : running with 12 processors
-Traceback (most recent call last):
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 884, in <module>
-    main()
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 876, in main
-    errormsg = process(graph, inputs=inputs, args=args)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/multi_process.py", line 115, in process
-    ubergraph = processor.create_partitioned(workflow)
-  File "/home/ll2419/miniconda3/envs/py37_d4p_auto_1/lib/python3.7/site-packages/dispel4py-1.4.0-py3.7.egg/dispel4py/new/processor.py", line 369, in create_partitioned
-    assign_and_connect(workflow_all, len(workflow_all.graph.nodes()))
-TypeError: cannot unpack non-iterable NoneType object
-RUN ARGS: 
-Namespace(attr=None, data='{"read":[{"input":"Articles_cleaned.csv"}]}', file=None, iter=1, module='analysis_sentiment.py', num=12, provenance=None, simple=False, target='multi')
-==========
-Graph is larger than job size: 13 > 12.
-Graph is larger than job size: 13 > 11.
 ---------------------------------
 multi : running with 14 processors
 RUN ARGS: 
@@ -151,14 +175,14 @@ GlobalHappyState15 (rank 4): Processed 1 iteration.
 read11 (rank 0): Processed 1 iteration.
 Tokenization_WD16 (rank 5): Processed 2470 iterations.
 SentiWordNetScore17 (rank 6): Processed 2470 iterations.
-ComputeSentiWordNetScore18 (rank 7): Processed 2470 iterations.
-HappyState20 (rank 9): Processed 1121 iterations.
-HappyState20 (rank 10): Processed 874 iterations.
-HappyState20 (rank 11): Processed 440 iterations.
+HappyState20 (rank 10): Processed 1085 iterations.
+HappyState20 (rank 9): Processed 698 iterations.
 FindState19 (rank 8): Processed 2435 iterations.
 GlobalHappyState21 (rank 12): Processed 201 iterations.
-NEW ELAPSED TIME: 153.86153
-NEW ELAPSED TOTAL CPU TIME: 1241.98014
+HappyState20 (rank 11): Processed 652 iterations.
+ComputeSentiWordNetScore18 (rank 7): Processed 2470 iterations.
+NEW ELAPSED TIME: 152.61416
+NEW ELAPSED TOTAL CPU TIME: 1231.37667
 ---------------------------------
 multi : running with 16 processors
 RUN ARGS: 
@@ -171,14 +195,14 @@ HappyState14 (rank 3): Processed 2470 iterations.
 GlobalHappyState15 (rank 4): Processed 1 iteration.
 read11 (rank 0): Processed 1 iteration.
 Tokenization_WD16 (rank 5): Processed 2470 iterations.
-ComputeSentiWordNetScore18 (rank 7): Processed 2470 iterations.
 SentiWordNetScore17 (rank 6): Processed 2470 iterations.
-HappyState20 (rank 9): Processed 540 iterations.
-GlobalHappyState21 (rank 12): Processed 184 iterations.
-HappyState20 (rank 10): Processed 1182 iterations.
-HappyState20 (rank 11): Processed 713 iterations.
+ComputeSentiWordNetScore18 (rank 7): Processed 2470 iterations.
+HappyState20 (rank 9): Processed 620 iterations.
+HappyState20 (rank 10): Processed 542 iterations.
+HappyState20 (rank 11): Processed 1273 iterations.
+GlobalHappyState21 (rank 12): Processed 200 iterations.
 FindState19 (rank 8): Processed 2435 iterations.
-NEW ELAPSED TIME: 154.63316
-NEW ELAPSED TOTAL CPU TIME: 1247.91245
+NEW ELAPSED TIME: 156.62882
+NEW ELAPSED TOTAL CPU TIME: 1264.11503
 ---------------------------------
 All experiments completed!
