@@ -316,7 +316,7 @@ class AutoScaler():
         while True:
             
             self.auto_scale()
-            print(f"MONITOR: ACTIVE SIZE = {self.active_size.value}")
+            # print(f"MONITOR: ACTIVE SIZE = {self.active_size.value}")
             if self.is_finished() and self.active_count.value == 0:
 
                 # logger.info("All tasks are finished")

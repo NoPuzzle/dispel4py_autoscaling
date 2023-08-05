@@ -259,7 +259,7 @@ class AutoScaler():
 
             self.auto_scale()
 
-            print(f"MONITOR: ACTIVE SIZE = {self.active_size.value}")
+            # print(f"MONITOR: ACTIVE SIZE = {self.active_size.value}")
             if self.queue.empty() and self.active_count.value == 0:
                 
                 # print("queue is empty")
