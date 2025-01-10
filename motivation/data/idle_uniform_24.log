@@ -1,0 +1,107 @@
+RUN ARGS: 
+Namespace(attr=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph_uniform.py', num=24, provenance=None, simple=False, target='multi')
+==========
+Processes: {'read4': range(0, 1), 'GetVOTable5': range(1, 8), 'FilterColumns6': range(8, 15), 'InternalExtinction7': range(15, 22)}
+read4 (rank 0): PE read4 total idle time: 0.0000 seconds
+PE read4 total idle time: 0.0000 seconds
+read4 (rank 0): Processed 1 iteration.
+GetVOTable5 (rank 4): PE GetVOTable5 total idle time: 0.0044 seconds
+PE GetVOTable5 total idle time: 0.0044 seconds
+GetVOTable5 (rank 4): Processed 71 iterations.
+GetVOTable5 (rank 6): PE GetVOTable5 total idle time: 0.0054 seconds
+PE GetVOTable5 total idle time: 0.0054 seconds
+GetVOTable5 (rank 6): Processed 71 iterations.
+GetVOTable5 (rank 5): PE GetVOTable5 total idle time: 0.0041 seconds
+PE GetVOTable5 total idle time: 0.0041 seconds
+GetVOTable5 (rank 5): Processed 71 iterations.
+GetVOTable5 (rank 7): PE GetVOTable5 total idle time: 0.0037 seconds
+PE GetVOTable5 total idle time: 0.0037 seconds
+GetVOTable5 (rank 7): Processed 71 iterations.
+GetVOTable5 (rank 1): PE GetVOTable5 total idle time: 0.0041 seconds
+PE GetVOTable5 total idle time: 0.0041 seconds
+GetVOTable5 (rank 1): Processed 72 iterations.
+GetVOTable5 (rank 2): PE GetVOTable5 total idle time: 0.0048 seconds
+PE GetVOTable5 total idle time: 0.0048 seconds
+GetVOTable5 (rank 2): Processed 72 iterations.
+GetVOTable5 (rank 3): PE GetVOTable5 total idle time: 0.0037 seconds
+PE GetVOTable5 total idle time: 0.0037 seconds
+GetVOTable5 (rank 3): Processed 72 iterations.
+FilterColumns6 (rank 9): PE FilterColumns6 total idle time: 33.2363 seconds
+PE FilterColumns6 total idle time: 33.2363 seconds
+FilterColumns6 (rank 9): Processed 72 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+FilterColumns6 (rank 12): PE FilterColumns6 total idle time: 33.2793 seconds
+PE FilterColumns6 total idle time: 33.2793 seconds
+FilterColumns6 (rank 12): Processed 71 iterations.
+FilterColumns6 (rank 14): PE FilterColumns6 total idle time: 33.2185 seconds
+PE FilterColumns6 total idle time: 33.2185 seconds
+FilterColumns6 (rank 14): Processed 71 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+FilterColumns6 (rank 10): PE FilterColumns6 total idle time: 33.2879 seconds
+PE FilterColumns6 total idle time: 33.2879 seconds
+FilterColumns6 (rank 10): Processed 72 iterations.
+FilterColumns6 (rank 8): PE FilterColumns6 total idle time: 33.2544 seconds
+PE FilterColumns6 total idle time: 33.2544 seconds
+FilterColumns6 (rank 8): Processed 71 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+FilterColumns6 (rank 13): PE FilterColumns6 total idle time: 33.1870 seconds
+PE FilterColumns6 total idle time: 33.1870 seconds
+FilterColumns6 (rank 13): Processed 71 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+InternalExtinction7 (rank 17): PE InternalExtinction7 total idle time: 33.8281 seconds
+PE InternalExtinction7 total idle time: 33.8281 seconds
+InternalExtinction7 (rank 17): Processed 72 iterations.
+InternalExtinction7 (rank 15): PE InternalExtinction7 total idle time: 33.8313 seconds
+PE InternalExtinction7 total idle time: 33.8313 seconds
+InternalExtinction7 (rank 15): Processed 71 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+InternalExtinction7 (rank 18): PE InternalExtinction7 total idle time: 33.8257 seconds
+PE InternalExtinction7 total idle time: 33.8257 seconds
+InternalExtinction7 (rank 18): Processed 72 iterations.
+InternalExtinction7 (rank 19): PE InternalExtinction7 total idle time: 33.8238 seconds
+PE InternalExtinction7 total idle time: 33.8238 seconds
+InternalExtinction7 (rank 19): Processed 72 iterations.
+InternalExtinction7 (rank 20): PE InternalExtinction7 total idle time: 33.8221 seconds
+PE InternalExtinction7 total idle time: 33.8221 seconds
+InternalExtinction7 (rank 20): Processed 71 iterations.
+InternalExtinction7 (rank 21): PE InternalExtinction7 total idle time: 33.8200 seconds
+PE InternalExtinction7 total idle time: 33.8200 seconds
+InternalExtinction7 (rank 21): Processed 71 iterations.
+FilterColumns6 (rank 11): PE FilterColumns6 total idle time: 33.3123 seconds
+PE FilterColumns6 total idle time: 33.3123 seconds
+FilterColumns6 (rank 11): Processed 72 iterations.
+InternalExtinction7 (rank 16): PE InternalExtinction7 total idle time: 33.8299 seconds
+PE InternalExtinction7 total idle time: 33.8299 seconds
+InternalExtinction7 (rank 16): Processed 71 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+NEW ELAPSED TIME: 33.87633
+NEW ELAPSED TOTAL CPU TIME: 703.49874

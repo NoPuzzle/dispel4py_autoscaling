@@ -1,0 +1,51 @@
+RUN ARGS: 
+Namespace(attr=None, data='{"read" : [ {"input" : "cp_coordinates_500.txt"} ]}', file=None, iter=1, module='int_ext_graph_skew.py', num=12, provenance=None, simple=False, target='multi')
+==========
+Processes: {'read4': range(0, 1), 'GetVOTable5': range(1, 4), 'FilterColumns6': range(4, 7), 'InternalExtinction7': range(7, 10)}
+read4 (rank 0): PE read4 total idle time: 0.0000 seconds
+PE read4 total idle time: 0.0000 seconds
+read4 (rank 0): Processed 1 iteration.
+GetVOTable5 (rank 1): PE GetVOTable5 total idle time: 0.0226 seconds
+PE GetVOTable5 total idle time: 0.0226 seconds
+GetVOTable5 (rank 1): Processed 167 iterations.
+GetVOTable5 (rank 2): PE GetVOTable5 total idle time: 0.0205 seconds
+PE GetVOTable5 total idle time: 0.0205 seconds
+GetVOTable5 (rank 2): Processed 167 iterations.
+GetVOTable5 (rank 3): PE GetVOTable5 total idle time: 0.0193 seconds
+PE GetVOTable5 total idle time: 0.0193 seconds
+GetVOTable5 (rank 3): Processed 166 iterations.
+FilterColumns6 (rank 5): PE FilterColumns6 total idle time: 76.8310 seconds
+PE FilterColumns6 total idle time: 76.8310 seconds
+FilterColumns6 (rank 5): Processed 167 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+FilterColumns6 (rank 4): PE FilterColumns6 total idle time: 76.9606 seconds
+PE FilterColumns6 total idle time: 76.9606 seconds
+FilterColumns6 (rank 4): Processed 166 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+InternalExtinction7 (rank 9): PE InternalExtinction7 total idle time: 122.7770 seconds
+PE InternalExtinction7 total idle time: 122.7770 seconds
+InternalExtinction7 (rank 9): Processed 167 iterations.
+FilterColumns6 (rank 6): PE FilterColumns6 total idle time: 76.8859 seconds
+PE FilterColumns6 total idle time: 76.8859 seconds
+FilterColumns6 (rank 6): Processed 167 iterations.
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:43:4: W06: Invalid UCD 'POS_EQ_DEC_MAIN': Unknown word 'POS_EQ_DEC_MAIN' [astropy.io.votable.tree]
+WARNING: W06: None:49:4: W06: Invalid UCD 'ID_MAIN': Unknown word 'ID_MAIN' [astropy.io.votable.tree]
+WARNING: W50: None:64:4: W50: Invalid unit string 'log(0.1arcmin)' [astropy.io.votable.tree]
+WARNING: W06: None:40:4: W06: Invalid UCD 'POS_EQ_RA_MAIN': Unknown word 'POS_EQ_RA_MAIN' [astropy.io.votable.tree]
+InternalExtinction7 (rank 7): PE InternalExtinction7 total idle time: 122.7802 seconds
+PE InternalExtinction7 total idle time: 122.7802 seconds
+InternalExtinction7 (rank 7): Processed 167 iterations.
+InternalExtinction7 (rank 8): PE InternalExtinction7 total idle time: 122.7781 seconds
+PE InternalExtinction7 total idle time: 122.7781 seconds
+InternalExtinction7 (rank 8): Processed 166 iterations.
+NEW ELAPSED TIME: 122.83913
+NEW ELAPSED TOTAL CPU TIME: 1099.23406
